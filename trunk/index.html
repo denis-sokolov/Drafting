@@ -1,0 +1,254 @@
+<!--
+        Copyright 2008 Denis Sokolov <denis@licejus.lt>
+
+        All rights reserved.
+        The application will be released under GPL a bit later.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+	<head>
+		<title>
+			Drafting timer application
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description"
+				content="An application for a judge calling a draft in a Magic game.">
+		<meta name="author" content="Denis Sokolov">
+		<meta name="robots" content="all">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rev="made" href="mailto:denis@sokolov.cc">
+		<link rel="shortcut icon" href="img/favicon.png">
+		<link rel="apple-touch-icon" href="img/favicon.png">
+	</head>
+	<body>
+		<table><tr><td><div id="content">
+			<p class="loading">
+				Loading the timer...
+			</p>
+			<ul id="steps">
+				<!--[if IE]>
+				<li>
+					<p>Warning!</p>
+					<p>
+						You are using Internet Explorer.
+						The browser is unbelievably unfriendly to both
+							users and developers.
+						It&rsquo;s behaviour is unexpected and unpredictable.
+						Thus I give no guarantee, how the application will
+							work under this browser.
+					</p>
+					<p>
+						For the sake of yourself and the Internet, please
+							move to a better browser.
+						I advice choosing
+							<a href="http://www.google.com/chrome">Chrome</a>,
+						but there is
+							<a href="http://www.mozilla.com/firefox">Firefox</a>
+							or
+							<a href="http://www.opera.com">Opera</a>,
+							if you need other alternatives.
+					</p>
+				</li>
+				<![endif]-->
+				<li>
+					<p>
+						Hello, fellow judge!
+					</p>
+					<p>
+						The application is supposed to help you call the
+							standart draft.
+					</p>
+					<p>
+						The idea is that all you have to do is read the
+							text on the screen and watch the players.
+						However, sometimes you will encounter
+							<em class="template">emphasized</em> text,
+							which you should change according to your draft
+							situation.
+					</p>
+					<p>
+						The draft is divided into actions/screens, where
+							the program will wait for your action of
+							pressing a button, which you should <strong>not</strong>
+							announce. ^_^
+					</p>
+					<p>
+						Since the button is always focused, the application
+							is controlled with the <strong>space</strong> button.
+					</p>
+					<p>
+						More information about the program will be found
+							<a href="#endStep">at the end</a> of the
+							program.
+					</p>
+					<button>Understood. Let&rsquo;s go!</button>
+				</li>
+				<li>
+					<p class="warning">
+						Notice: the program is in beta status.
+					</p>
+					<p>
+						This means that it might make mistakes and you
+							should be ready to continue the draft
+							manually at any time.
+					</p>
+					<p>
+						Please report all bugs and feature requests
+							(including text changing proposals) to
+							<span class="email">drafting@sokolov.cc</span>.
+					</p>
+					<button>I understand.</button>
+				</li>
+				<li id="begin">
+					<p>Welcome to the draft.</p>
+					<p>We will draft three boosters &mdash; <em class="template">SET</em>, <em class="template">SET</em> and <em class="template">SET</em>.</p>
+					<p>
+						Please make sure you have these three packs
+						in front of you.
+					</p>
+					<button>Yes, they have.</button>
+				</li>
+				<li>
+					<p>
+						Between the boosters, you will have some time
+						to review the cards you have drafted that far.
+					</p>
+					<p>
+						During the draft procedure you should stay
+						focused on your cards and try not to give away
+						any kind of information to your opponents.
+					</p>
+					<button>Got it.</button>
+				</li>
+				<li>
+					<p>
+						Please open the first booster of <em class="template">SET</em>,
+							and count the cards
+							<strong>face-down</strong>.
+							There should be 15 cards in there.
+					</p>
+					<button>Yes, there are.</button>
+				</li>
+				<li>
+					<p>
+						You will have to pass the first booster to your
+							<strong>left</strong>.
+					</p>
+					<p>
+						Prepare for the draft and keep silence.
+					</p>
+					<button>Begin the draft.</button>
+				</li>
+				<li class="simpleBooster"></li>
+				<li>
+					<p class="pre" title="3">You now have one minute to review what you have
+						drafted.</p>
+					<var>60</var>
+					<p class="pulse" title="10">10 seconds!</p>
+					<samp>Put back the cards.</samp>
+					<button>Done.</button>
+				</li>
+				<li>
+					<p>
+						Please open the second booster of <em class="template">SET</em>,
+							and count the cards
+							<strong>face-down</strong>.
+							There should be 15 cards in there.
+					</p>
+					<p>
+						You have to pass the cards now to your
+							<strong>right</strong>.
+					</p>
+					<button>Begin the draft.</button>
+				</li>
+				<li class="simpleBooster"></li>
+				<li>
+					<p class="pre" title="3">You now have one minute to review what you have
+						drafted.</p>
+					<var>60</var>
+					<p class="pulse" title="10">10 seconds!</p>
+					<samp>Put back the cards.</samp>
+					<button>Done.</button>
+				</li>
+				<li>
+					<p>
+						Please open the third booster, and count the cards
+							<strong>face-down</strong>.
+							There should be 15 cards in there.
+					</p>
+					<p>
+						You have to pass the cards now to your
+							<strong>left</strong>.
+					</p>
+					<button>Begin the draft.</button>
+				</li>
+				<li class="simpleBooster"></li>
+				<li>
+					<p>
+						The draft is now over.
+					</p>
+					<p>
+						Please take your cards and proceed to your sitting
+							place. Try to avoid giving information
+							related to the draft to other players.
+					</p>
+					<button>Finish.</button>
+				</li>
+				<li id="endStep">
+					<h1>About the program</h1>
+					<p>
+						The program is written in JavaScript + jQuery by
+						Denis Sokolov &mdash; a level 1 judge from Lithuania
+						(<a href="http://sokolov.cc">homepage</a>).
+					</p>
+					<p>
+						Please report all bugs and feature requests
+							(including text changing proposals) to
+							<span class="email">drafting@sokolov.cc</span>.
+					</p>
+					<p>
+						To save this application and use it offline, use
+							your browser&rsquo;s ‘File &rarr; Save Page’
+							function.
+						But please check back online sometimes, as it will
+							be updated, while your offline version will stay
+							the same.
+					</p>
+					<p>
+						Currently all rights to the application are reserved,
+							but this is mainly due the beta status of the
+							program.
+						As soon as it will reach a certain quality, I
+							will release it under GPL.
+					</p>
+					<p>
+						Have a nice day!
+					</p>
+					<p>
+						<a href="#begin">Restart the draft</a>.
+					</p>
+				</li>
+			</ul>
+			<noscript>
+				<p>
+					The application is written in JavaScript and cannot
+						work without it. Please turn it on.
+				</p>
+				<p>
+					I appreciate your concerns about JavaScript
+						problems and security and share them.
+				</p>
+				<p>
+					However, this application really requires it, as it
+						written completely in JavaScript.
+				</p>
+			</noscript>
+		</div></td></tr></table>
+		<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="engine.js"></script>
+	</body>
+</html>
