@@ -29,14 +29,14 @@ body {
 	line-height: 1.6em;
 	font-size: 1.5em;
 }
-
+button { cursor: pointer }
 h1, h2 { margin-bottom: 1ex }
 h1 { margin-top: 4ex; font-size: 190% }
 h2 { margin-top: 3ex; font-size: 150% }
 h3 { margin-top: 2ex; margin-left: 2em; font-size: 110% }
 h4 { margin-top: 1ex; margin-left: 3em; font-size: 100% }
 p { margin-bottom: 1em; max-width: 45em } /* ie6 modified */
-p img { vertical-align: text-bottom }
+p img { vertical-align: text-top }
 ul { list-style-type: none }
 
 /* centring the box */
@@ -49,15 +49,22 @@ ul { list-style-type: none }
 	#steps li { display: none }
 	#steps li.current { display: block }
 
+/* positioning */
+	.timer { text-align: center }
+
 /* appearance */
 	button { padding: 1em 2em; font-size: 150%; width: 100% }
-	kbd, var, samp { visibility: hidden; display: block }
-	var { font-style: normal; font-size: 200% }
+	kbd, var { visibility: hidden; display: block }
+	samp { display: none }
+	var { font-style: normal; font-size: 200%; margin-bottom: 1ex }
 
 	.debugMessage { position: fixed; top: 0; right: 0;
 		line-height: 1em; font-size: 12px; background-color: #FF9866; color: black;
 		padding: 0 0 1ex 1ex; margin: 0 }
 	.email { font-family: monospace }
-	.pulse { visibility: hidden; color: red; font-size: 150% }
+	.pulse { visibility: hidden; color: red; font-size: 150%; margin: 0; padding: 0; }
 	.template { color: #828300; font-style: normal }
+	.timerControls { visibility: hidden; font-size: 60%; max-width: none }
+	.appname { font-size: 60% }
+		.appname .version { font-size:120% }
 	.warning { color: #BE0000 }
