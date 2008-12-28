@@ -1,13 +1,17 @@
 /*
-        Copyright 2008 Denis Sokolov <denis@licejus.lt>
-
-        All rights reserved.
-        The application will be released under GPL a bit later.
-
-        This program is distributed in the hope that it will be useful,
-        but WITHOUT ANY WARRANTY; without even the implied warranty of
-        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-*/
+ *      This program is free software; you can redistribute it and/or modify
+ *      it under the terms of the GNU General Public License as published by
+ *      the Free Software Foundation; either version 3 of the License, or
+ *      (at your option) any later version.
+ *
+ *      This program is distributed in the hope that it will be useful,
+ *      but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *      GNU General Public License for more details.
+ *
+ *      You should have received a copy of the GNU General Public License
+ *      along with this program; if not, see: <http://www.gnu.org/licenses/>
+ */
 
 * { padding: 0; margin: 0 }
 
@@ -35,22 +39,25 @@ p { margin-bottom: 1em; max-width: 45em } /* ie6 modified */
 p img { vertical-align: text-bottom }
 ul { list-style-type: none }
 
-.debugMessage { position: fixed; top: 0; right: 0;
-	line-height: 1em; font-size: 12px; background-color: #FF9866; color: black;
-	padding: 0 0 1ex 1ex; margin: 0 }
+/* centring the box */
+	html, body { height: 100% }
+	table { width: 100%; height: 100% }
+	td { vertical-align: middle }
+	#content { min-width: 5em; max-width: 30em; margin: 0 auto }
 
-html, body { height: 100% }
-table { width: 100%; height: 100% }
-td { vertical-align: middle }
-#content { min-width: 5em; max-width: 30em; margin: 0 auto }
-#steps li { display: none }
-#steps li.current { display: block }
+/* logic */
+	#steps li { display: none }
+	#steps li.current { display: block }
 
-.template { color: orange; font-style: normal }
-.warning { color: red }
-.email { font-family: monospace }
+/* appearance */
+	button { padding: 1em 2em; font-size: 150%; width: 100% }
+	kbd, var, samp { visibility: hidden; display: block }
+	var { font-style: normal; font-size: 200% }
 
-button { padding: 1em 2em; font-size: 150%; width: 100% }
-kbd, var, samp { visibility: hidden; display: block }
-var { font-style: normal; font-size: 200% }
-.pulse { visibility: hidden; color: red; font-size: 150% }
+	.debugMessage { position: fixed; top: 0; right: 0;
+		line-height: 1em; font-size: 12px; background-color: #FF9866; color: black;
+		padding: 0 0 1ex 1ex; margin: 0 }
+	.email { font-family: monospace }
+	.pulse { visibility: hidden; color: red; font-size: 150% }
+	.template { color: #828300; font-style: normal }
+	.warning { color: #BE0000 }
