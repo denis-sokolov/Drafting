@@ -64,7 +64,9 @@ ul { list-style-type: none }
 	.email { font-family: monospace }
 	.pulse { visibility: hidden; color: red; font-size: 150%; margin: 0; padding: 0; }
 	.template { color: #828300; font-style: normal }
-	.timerControls { visibility: hidden; font-size: 60%; max-width: none }
+
+	.timerControls { visibility: hidden; font-size: 60%; max-width: none;
+		line-height: 1em }
 	.appname { font-size: 60% }
 		.appname .version { font-size:120% }
 	.warning { color: #BE0000 }

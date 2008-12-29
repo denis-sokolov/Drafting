@@ -31,15 +31,20 @@ $(document).ready(function(){
 		$('li.simpleBooster').each(function(){
 			var me = $(this);
 			var content = '';
+			var boosterTitle = me.attr('title');
+
 			//$([5]).each(function(no){
 			$([35, 35, 35, 25, 25, 25, 20, 20, 20, 10, 10, 5, 5, 5]).each(function(no){
 				var warn = 10;
 				if (this < 15) warn = 5;
 				if (this < 10) warn = 0;
-				content += '<li class="timer"><p class="pre" title="1">Look!</p><var>'+this+'</var>';
+				content += '<li class="timer">'
+					+'<p class="pre" title="1">Look!</p><var>'+this+'</var>';
 				if (warn > 0)
 					content += '<p class="pulse" title="'+warn+'">'+warn+' seconds!</p>';
-				content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button></li>';
+				content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button>'
+				+'<p class="timerControls">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
+				+'</li>';
 			});
 			me.after(content);
 			me.remove();
@@ -172,7 +177,7 @@ function show(me)
 
 			timerHelper(timeout);
 
-			me.find('var').add('.timerControls', me).css('visibility', 'visible');
+			me.find('var').add('.timerControls', me).add('.info', me).css('visibility', 'visible');
 
 		}, delay, me);
 	}
