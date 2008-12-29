@@ -36,13 +36,14 @@ $(document).ready(function(){
 					case 'input': break;
 					case 'a': $(e.target).click(); break;
 					default:
-						if ($('#end.current').length < 1)
+						if ($('#end.current, .current.freeze').length < 1)
 							next();
 					break;
 				}
 			}
 		});
-		$('button').mouseup(next);
+
+		bindButtons();
 
 		$('a[href^="#"]').click(function(e){
 			e.preventDefault();
@@ -105,7 +106,8 @@ function show(me)
 		me.find('button').focus();
 	if (me.find('var').length)
 	{
-		me.find('button').css('opacity', 0).attr('disabled', 'disabled');
+		me.addClass('freeze')
+			.find('button').css('opacity', 0);
 
 		var delay = 0;
 		if (me.find('.pre').length)
@@ -146,8 +148,8 @@ function timerHelper(remaining)
 	{
 		timerHelper.element.text(timerHelper.element.data('finished'));
 		timerHelper.element.parent()
+			.removeClass('freeze')
 			.find('button').show()
-				.attr('disabled','')
 				.animate({opacity: 1}, 1000).focus()
 				.end()
 			.find('.timerControls .skip').fadeOut();
@@ -257,7 +259,7 @@ function timers()
 					next();
 				});
 		});
-	$('button').unbind('mouseup').mouseup(next);
+	bindButtons();
 }
 
 // Limit of 20 cookies
@@ -345,4 +347,12 @@ window.cookies = {
 	unset: function(name) {
 		this.set(name,"",-1);
 	}
+}
+function bindButtons()
+{
+	$('button').unbind('mouseup').mouseup(function(){
+			if ($('.current.freeze').length < 1)
+				next();
+		});
+
 }
