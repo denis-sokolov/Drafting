@@ -36,7 +36,8 @@ $(document).ready(function(){
 					case 'input': break;
 					case 'a': $(e.target).click(); break;
 					default:
-					next();
+						if ($('#end.current').length < 1)
+							next();
 					break;
 				}
 			}
