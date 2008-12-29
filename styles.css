@@ -35,7 +35,7 @@ h1 { margin-top: 4ex; font-size: 190% }
 h2 { margin-top: 3ex; font-size: 150% }
 h3 { margin-top: 2ex; margin-left: 2em; font-size: 110% }
 h4 { margin-top: 1ex; margin-left: 3em; font-size: 100% }
-p { margin-bottom: 1em; max-width: 45em } /* ie6 modified */
+p { margin-bottom: 1em }
 p img { vertical-align: text-top }
 ul { list-style-type: none }
 
@@ -66,9 +66,11 @@ ul { list-style-type: none }
 	.pulse { visibility: hidden; color: red; font-size: 150%; margin: 0; padding: 0; }
 	.template { color: #828300; font-style: normal }
 
-	.timerControls { visibility: hidden; font-size: 60%; max-width: none;
-		line-height: 1em }
+	.info { margin-top: 1ex }
 	.info,
-	.appname { font-size: 60% }
+	.timerControls { visibility: hidden; font-size: 60%;
+		line-height: 1em }
+
+	.appname { font-size: 60%; line-height: 1em }
 		.appname .version { font-size:120% }
 	.warning { color: #BE0000 }

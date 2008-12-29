@@ -144,7 +144,14 @@ function timerHelper(remaining)
 	if (remaining <= 0)
 	{
 		timerHelper.element.text(timerHelper.element.data('finished'));
-		timerHelper.element.parent().find('button').show().attr('disabled','').animate({opacity: 1}, 1000).focus();
+		timerHelper.element.parent()
+			.find('button').show()
+				.attr('disabled','')
+				.animate({opacity: 1}, 1000).focus()
+				.end()
+			.find('.timerControls .skip').fadeOut();
+
+
 		return;
 	}
 	timerHelper.element.text((remaining/1000).toFixed(1));
@@ -194,7 +201,7 @@ function templates()
 			if (warn > 0)
 				content += '<p class="pulse" title="'+warn+'">'+warn+' seconds!</p>';
 			content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button>'
-			+'<p class="timerControls">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
+			+'<p class="info">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
 			+'</li>';
 		});
 		me.after(content);
