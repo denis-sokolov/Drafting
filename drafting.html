@@ -145,11 +145,19 @@
 				<li id="settings">
 					<h1>Settings</h1>
 					<p title="If you draft prepared boosters with the basic land removed, select this option.">
-						<input id="setting-14cardPack" type="checkbox">
-						<label for="setting-14cardPack">
+						<input id="s-14cardPack" type="checkbox">
+						<label for="s-14cardPack">
 							Draft 14-card packs
 						</label>
 					</p>
+					<fieldset>
+						<legend>Sets:</legend>
+					<p class="setCustomizer">
+						<input id="s-set1" value="Shards of Alara">
+						<input id="s-set2" value="Shards of Alara">
+						<input id="s-set3" value="Shards of Alara">
+					</p>
+					</fieldset>
 					<button>Start the draft</button>
 					<!--
 						<p class="info">The settings will be automatically saved in your browser.</p>
@@ -157,7 +165,7 @@
 				</li>
 				<li id="begin">
 					<p>Welcome to the draft.</p>
-					<p>We will draft three boosters &mdash; <em class="template">SET</em>, <em class="template">SET</em> and <em class="template">SET</em>.</p>
+					<p>We will draft three boosters &mdash; <span class="v-set1">SET</span>, <span class="v-set2">SET</span> and <span class="v-set3">SET</span>.</p>
 					<p>
 						Please make sure you have these three packs
 						in front of you.
@@ -178,10 +186,10 @@
 				</li>
 				<li>
 					<p>
-						Please open the first booster of <em class="template">SET</em>,
+						Please open the first booster of <span class="v-set1">SET</span>,
 							and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="cardsInBooster">15</span> cards in there.
+							There should be <span class="v-cardsInBooster">15</span> cards in there.
 					</p>
 					<button>Yes, there are.</button>
 				</li>
@@ -206,10 +214,10 @@
 				</li>
 				<li>
 					<p>
-						Please open the second booster of <em class="template">SET</em>,
+						Please open the second booster of <span class="v-set2">SET</span>,
 							and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="cardsInBooster">15</span> cards in there.
+							There should be <span class="v-cardsInBooster">15</span> cards in there.
 					</p>
 					<p>
 						You have to pass the cards now to your
@@ -228,9 +236,9 @@
 				</li>
 				<li>
 					<p>
-						Please open the third booster, and count the cards
+						Please open the third booster, <span class="v-set3">SET</span> and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="cardsInBooster">15</span> cards in there.
+							There should be <span class="v-cardsInBooster">15</span> cards in there.
 					</p>
 					<p>
 						You have to pass the cards now to your

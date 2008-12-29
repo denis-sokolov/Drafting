@@ -30,6 +30,7 @@ body {
 	font-size: 1.5em;
 }
 button { cursor: pointer }
+fieldset { border: 0 }
 h1, h2 { margin-bottom: 1ex }
 h1 { margin-top: 4ex; font-size: 190% }
 h2 { margin-top: 3ex; font-size: 150% }
@@ -52,6 +53,8 @@ ul { list-style-type: none }
 /* positioning */
 	.timer { text-align: center }
 	#settings label { margin-left: 1ex }
+		.setCustomizer { text-align: center }
+		.setCustomizer input { width: 30%; text-align: center }
 
 /* appearance */
 	button { padding: 1em 2em; font-size: 150%; width: 100% }

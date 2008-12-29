@@ -189,7 +189,7 @@ function templates()
 		var boosterTitle = me.attr('title');
 		var simpleBooster = [35, 35, 35, 25, 25, 25, 20, 20, 20, 10, 10, 5, 5, 5];
 
-		if ($('#setting-14cardPack').attr('checked'))
+		if ($('#s-14cardPack').attr('checked'))
 			simpleBooster.shift();
 
 		//$([5]).each(function(no){
@@ -217,8 +217,10 @@ function prepareDraft()
 	templates();
 	timers();
 	// Setting the texts in the engine
-	if (window.settings.get('setting-14cardPack'))
-		$('.cardsInBooster').text('14');
+	if (window.settings.get('s-14cardPack'))
+		$('.v-cardsInBooster').text('14');
+	for (var i=1;i<4;++i)
+		$('.v-set'+i).text('‘'+window.settings.get('s-set'+i)+'’');
 }
 
 function timers()
@@ -262,17 +264,25 @@ function timers()
 window.settings = {
 	get: function(k){
 		var me = $('#'+k);
-		if (me.attr('type') == 'checkbox')
+		switch (me.attr('type'))
 		{
-			return me.attr('checked');
+			case 'checkbox':
+				return me.attr('checked');
+			case 'text':
+				return me.val();
 		}
+
 	},
 	set: function(k, v){
 		var me = $('#'+k);
-		if (me.attr('type') == 'checkbox')
+		switch (me.attr('type'))
 		{
-			me.attr('checked',v);
-			return v;
+			case 'checkbox':
+				me.attr('checked',v);
+				return v;
+			case 'text':
+				me.val(v);
+				return v;
 		}
 	},
 
@@ -287,7 +297,9 @@ window.settings = {
 		$('#settings')
 			.find('input, select').each(function(){
 				var id = $(this).attr('id');
-				window.settings.set(id, window.cookies.get(id));
+				var v = window.cookies.get(id);
+				if (v !== null)
+					window.settings.set(id, v);
 			});
 	}
 }
@@ -320,9 +332,9 @@ window.cookies = {
 			if (c.indexOf(nameEQ) == 0)
 			{
 				var r = c.substring(nameEQ.length,c.length);
-				if (r == 'false')
+				if (r === 'false')
 					return false;
-				if (r == 'true');
+				if (r === 'true')
 					return true;
 				return r;
 			}
