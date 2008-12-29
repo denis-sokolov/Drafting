@@ -51,6 +51,7 @@ ul { list-style-type: none }
 
 /* positioning */
 	.timer { text-align: center }
+	#settings label { margin-left: 1ex }
 
 /* appearance */
 	button { padding: 1em 2em; font-size: 150%; width: 100% }
