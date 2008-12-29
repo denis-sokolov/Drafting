@@ -27,64 +27,6 @@ $(document).ready(function(){
 		});
 	}
 
-	/* Template steps */
-		$('li.simpleBooster').each(function(){
-			var me = $(this);
-			var content = '';
-			var boosterTitle = me.attr('title');
-
-			//$([5]).each(function(no){
-			$([35, 35, 35, 25, 25, 25, 20, 20, 20, 10, 10, 5, 5, 5]).each(function(no){
-				var warn = 10;
-				if (this < 15) warn = 5;
-				if (this < 10) warn = 0;
-				content += '<li class="timer">'
-					+'<p class="pre" title="1">Look!</p><var>'+this+'</var>';
-				if (warn > 0)
-					content += '<p class="pulse" title="'+warn+'">'+warn+' seconds!</p>';
-				content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button>'
-				+'<p class="timerControls">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
-				+'</li>';
-			});
-			me.after(content);
-			me.remove();
-			return;
-		});
-
-	/* Timers */
-		$('var').each(function(){
-			var me = $(this);
-			me.attr('title',me.text() + '.0');
-			me.parents('li').addClass('timer');
-		});
-
-		$('li var').parent().append('<p class="timerControls">'
-			+'<a href="" class="restart">Restart this timer</a> '
-			+'<a href="" class="skip">Skip this timer</a>'
-			+'</p>');
-		$('.timerControls')
-			.find('.restart').click(function(e){
-				e.preventDefault();
-				stopTimers();
-				$(this).parents('li')
-					.fadeOut(function(){
-						var me = $(this);
-						me
-							.find('var').text(me.find('var').attr('title')).end()
-							.fadeIn();curr();
-					});
-			}).end()
-			.find('.skip').click(function(e){
-				e.preventDefault();
-				stopTimers();
-				$(this).parents('ul')
-					.fadeOut('fast', function(){
-						$(this).fadeIn();
-						next();
-					});
-			});
-
-
 	/* Movement events */
 		$('html').keypress(function (e) {
 			if (e.which == 32)
@@ -143,6 +85,10 @@ function show(me)
 {
 	$('li').removeClass('current');
 	stopTimers();
+
+	if (me.attr('id') == 'begin')
+		prepareDraft();
+
 	me.addClass('current');
 	if (me.find('button').length)
 		me.find('button').focus();
@@ -212,4 +158,80 @@ function stopTimers()
 		return;
 	while (b = setTimer.place.pop())
 		clearTimeout(b);
+}
+
+
+
+function templates()
+{
+	/* Template steps */
+	$('li.simpleBooster').each(function(){
+		var me = $(this);
+		var content = '';
+		var boosterTitle = me.attr('title');
+		var simpleBooster = [35, 35, 35, 25, 25, 25, 20, 20, 20, 10, 10, 5, 5, 5];
+
+		if ($('#setting-14cardPack').attr('checked'))
+			simpleBooster.shift();
+
+		//$([5]).each(function(no){
+		$(simpleBooster).each(function(no){
+			var warn = 10;
+			if (this < 15) warn = 5;
+			if (this < 10) warn = 0;
+			content += '<li class="timer">'
+				+'<p class="pre" title="1">Look!</p><var>'+this+'</var>';
+			if (warn > 0)
+				content += '<p class="pulse" title="'+warn+'">'+warn+' seconds!</p>';
+			content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button>'
+			+'<p class="timerControls">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
+			+'</li>';
+		});
+		me.after(content);
+		me.remove();
+		return;
+	});
+}
+
+function prepareDraft()
+{
+	templates();
+	timers();
+}
+
+function timers()
+{
+	/* Timers */
+	$('var').each(function(){
+		var me = $(this);
+		me.attr('title',me.text() + '.0');
+		me.parents('li').addClass('timer');
+	});
+
+	$('li var').parent().append('<p class="timerControls">'
+		+'<a href="" class="restart">Restart this timer</a> '
+		+'<a href="" class="skip">Skip this timer</a>'
+		+'</p>');
+	$('.timerControls')
+		.find('.restart').click(function(e){
+			e.preventDefault();
+			stopTimers();
+			$(this).parents('li')
+				.fadeOut(function(){
+					var me = $(this);
+					me
+						.find('var').text(me.find('var').attr('title')).end()
+						.fadeIn();curr();
+				});
+		}).end()
+		.find('.skip').click(function(e){
+			e.preventDefault();
+			stopTimers();
+			$(this).parents('ul')
+				.fadeOut('fast', function(){
+					$(this).fadeIn();
+					next();
+				});
+		});
+	$('button').unbind('mouseup').mouseup(next);
 }
