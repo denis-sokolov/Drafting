@@ -67,6 +67,7 @@ ul { list-style-type: none }
 
 	.timerControls { visibility: hidden; font-size: 60%; max-width: none;
 		line-height: 1em }
+	.info,
 	.appname { font-size: 60% }
 		.appname .version { font-size:120% }
 	.warning { color: #BE0000 }

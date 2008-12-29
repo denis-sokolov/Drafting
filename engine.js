@@ -29,8 +29,17 @@ $(document).ready(function(){
 
 	/* Movement events */
 		$('html').keypress(function (e) {
-			if (e.which == 32)
-				next();
+			if (e.which == 32) // space
+			{
+				switch (e.target.tagName.toLowerCase())
+				{
+					case 'input': break;
+					case 'a': $(e.target).click(); break;
+					default:
+					next();
+					break;
+				}
+			}
 		});
 		$('button').mouseup(next);
 
@@ -40,6 +49,7 @@ $(document).ready(function(){
 		});
 
 	$('.loading').hide();
+	window.settings.load();
 	next();
 });
 
@@ -195,8 +205,12 @@ function templates()
 
 function prepareDraft()
 {
+	window.settings.save();
 	templates();
 	timers();
+	// Setting the texts in the engine
+	if (window.settings.get('setting-14cardPack'))
+		$('.cardsInBooster').text('14');
 }
 
 function timers()
@@ -234,4 +248,81 @@ function timers()
 				});
 		});
 	$('button').unbind('mouseup').mouseup(next);
+}
+
+// Limit of 20 cookies
+window.settings = {
+	get: function(k){
+		var me = $('#'+k);
+		if (me.attr('type') == 'checkbox')
+		{
+			return me.attr('checked');
+		}
+	},
+	set: function(k, v){
+		var me = $('#'+k);
+		if (me.attr('type') == 'checkbox')
+		{
+			me.attr('checked',v);
+			return v;
+		}
+	},
+
+	save: function(){
+		$('#settings')
+			.find('input, select').each(function(){
+				var id = $(this).attr('id');
+				window.cookies.set(id, window.settings.get(id), 'max');
+			});
+	},
+	load: function(){
+		$('#settings')
+			.find('input, select').each(function(){
+				var id = $(this).attr('id');
+				window.settings.set(id, window.cookies.get(id));
+			});
+	}
+}
+
+
+/*
+ * Though taken from the Quirks Mode, I think it is too trivial to be
+ * 	copyrighted.
+ * http://www.quirksmode.org/js/cookies.html
+ * */
+window.cookies = {
+	set: function(name, value, days) {
+		if (days == 'max')
+			days = 365;
+		if (days) {
+			var date = new Date();
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			var expires = "; expires="+date.toGMTString();
+		}
+		else var expires = "";
+		document.cookie = name+"="+value+expires+"; path=/";
+	},
+
+	get: function (name) {
+		var nameEQ = name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
+			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0)
+			{
+				var r = c.substring(nameEQ.length,c.length);
+				if (r == 'false')
+					return false;
+				if (r == 'true');
+					return true;
+				return r;
+			}
+		}
+		return null;
+	},
+
+	unset: function(name) {
+		this.set(name,"",-1);
+	}
 }
