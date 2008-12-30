@@ -95,7 +95,7 @@ function next()
 
 function show(me)
 {
-	$('li').removeClass('current');
+	$('.current').removeClass('current');
 	stopTimers();
 
 	if (me.attr('id') == 'begin')
@@ -104,10 +104,15 @@ function show(me)
 	me.addClass('current');
 	if (me.find('button').length)
 		me.find('button').focus();
+
 	if (me.find('var').length)
 	{
-		me.addClass('freeze')
-			.find('button').css('opacity', 0);
+		me
+			// Disallow continuing before the timer runs out
+			.addClass('freeze')
+			.find('button').css('opacity', 0).end()
+			.find('.timerControls .skip').show() // Show the hidden skip
+			;
 
 		var delay = 0;
 		if (me.find('.pre').length)
