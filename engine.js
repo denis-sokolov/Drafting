@@ -14,11 +14,47 @@ constants = {
 	tick: 250,
 };
 
+localize = {
+	run: function(lang){
+		if (lang == 'en')
+		{
+			settings.set('s-lang', 'en');
+			settings.save();
+			window.location = window.location;
+			return false;
+		}
+
+		if (typeof vocabulary.extra[lang] != 'undefined')
+			for (i in vocabulary.extra.keys)
+		{
+			var key = vocabulary.extra.keys[i];
+			var string = vocabulary.extra[lang][i];
+			var type = key[0];
+			key = key.substring(2);
+			switch (type)
+			{
+				case 'c':
+					$('.vc-'+key).html(string);
+				break;
+				case 't':
+					$('.vt-'+key).attr('title', string);
+				break;
+				case 'j':
+					vocabulary[lang][key] = string;
+				break;
+			}
+		}
+
+		vocabulary.curr = vocabulary[lang];
+		settings.set('s-lang', lang);
+		settings.save();
+	}
+};
 
 $(document).ready(function(){
 	debug.setup();
-	controls.setup();
 	settings.load();
+	controls.setup();
 	navigation.first();
 	$('.loading').hide();
 });
@@ -41,6 +77,15 @@ controls = {
 		});
 	},
 
+	language: function() {
+		var l = settings.get('s-lang');
+		if (typeof l == 'string' && l != 'en') localize.run(l);
+
+		$('.languageSelector img').click(function(){
+			localize.run($(this).attr('alt'));
+		});
+	},
+
 	mouse: function() {
 		$('button').unbind('mouseup').mouseup(function(){
 			if ($('.current.freeze').length < 1)
@@ -51,7 +96,7 @@ controls = {
 	internalLinks: function() {
 		$('a[href^="#"]').click(function(e){
 			e.preventDefault();
-			show($($(this).attr('href')));
+			navigation.show($($(this).attr('href')));
 		});
 	},
 
@@ -59,6 +104,7 @@ controls = {
 		this.keyboard();
 		this.mouse();
 		this.internalLinks();
+		this.language();
 	},
 }
 
@@ -185,9 +231,9 @@ preparation = {
 		this.timers();
 		// Setting the texts in the engine
 		if (settings.get('s-14cardPack'))
-			$('.v-cardsInBooster').text('14');
+			$('.var-cardsInBooster').text('14');
 		for (var i=1;i<4;++i)
-			$('.v-set'+i).text('‘'+settings.get('s-set'+i)+'’');
+			$('.var-set'+i).text('‘'+settings.get('s-set'+i)+'’');
 	},
 
 	templates: function(){
@@ -207,12 +253,18 @@ preparation = {
 				if (this < 15) warn = 5;
 				if (this < 10) warn = 0;
 				content += '<li class="timer">'
-					+'<p class="pre" title="1">Look!</p><var>'+this+'</var>';
+					+'<p class="pre" title="1">'+vocabulary.curr.look+'</p><var>'+this+'</var>';
 				if (warn > 0)
-					content += '<p class="pulse" title="'+warn+'">'+warn+' seconds!</p>';
-				content += '<samp>Pass '+(14-no)+' card'+(no<13?'s':'')+'.</samp><button>Done.</button>'
-				+'<p class="info">Card '+(no+1)+'<br>'+boosterTitle+'</p>'
-				+'</li>';
+					content += '<p class="pulse" title="'+warn+'">'
+							+vocabulary.curr.seconds.numerify(warn)
+							+'</p>';
+				content += '<samp>'
+						+vocabulary.curr.passCards.numerify(14-no)
+						+'</samp><button>'+vocabulary.curr.passed+'</button>'
+						+'<p class="info">'
+						+vocabulary.curr.cardNum.ordify(no+1)
+						+'<br>'+boosterTitle+'</p>'
+						+'</li>';
 			});
 			me.after(content);
 			me.remove();
@@ -229,8 +281,10 @@ preparation = {
 		});
 
 		$('li var').parent().append('<p class="timerControls">'
-			+'<a href="" class="restart">Restart this timer</a> '
-			+'<a href="" class="skip">Skip this timer</a>'
+			+'<a href="" class="restart">'
+			+ vocabulary.curr.restartTimer + '</a> '
+			+'<a href="" class="skip">'
+			+ vocabulary.curr.skipTimer +'</a>'
 			+'</p>');
 		$('.timerControls')
 			.find('.restart').click(function(e){
@@ -267,6 +321,7 @@ settings = {
 			case 'checkbox':
 				return me.attr('checked');
 			case 'text':
+			case 'hidden':
 				return me.val();
 		}
 
@@ -279,6 +334,7 @@ settings = {
 				me.attr('checked',v);
 				return v;
 			case 'text':
+			case 'hidden':
 				me.val(v);
 				return v;
 		}
@@ -343,4 +399,25 @@ cookies = {
 	unset: function(name) {
 		this.set(name,"",-1);
 	}
+}
+
+String.prototype.numerify = function(num)
+{
+	return o(this, num, 'num');
+}
+
+String.prototype.ordify = function(num)
+{
+	return o(this, num, 'ord');
+}
+
+function o(str, num, callback)
+{
+	var tkns = str.split('|');
+	var data = [];
+	if (typeof tkns[1] != 'undefined')
+		 data = tkns[1].split('/');
+	return tkns[0]
+				.replace('%n', num)
+				.replace('%t', vocabulary.curr[callback](num, data));
 }

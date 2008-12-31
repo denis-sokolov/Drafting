@@ -73,66 +73,73 @@
 				</li>
 				<![endif]-->
 				<li>
-					<p>
+					<p class="languageSelector">
+						<img src="flags/en.png" alt="en"
+							title="Switch to English language">
+						<img src="flags/ru.png" alt="ru"
+							title="Переключиться на русский язык">
+					</p>
+					<p class="vc-h1">
 						Hello, fellow judge, willing to call a Magic draft!
 					</p>
-					<p>
+					<p class="vc-h2">
 						All you have to do is read the
 							text on the screen and watch the players.
 					</p>
-					<p>
+					<p class="vc-h3">
 						The program is controlled with a single button
 							on the screen.
 						Simply press a <strong>space</strong> button on
 							your keyboard to advance.
 					</p>
-					<button>Understood. Let&rsquo;s go!</button>
+					<button class="vc-understood">Understood. Let&rsquo;s go!</button>
 					<p class="appname">
 						Magic drafting application version
 							<span class="version"
-								title="Released on the 29th of December, 2008">0.3.4</span>.
+								title="Released on the 31th of December, 2008">0.5</span>.
 						<span title="The program is licensed under GPL 3">
 							<img src="copyleft.png" alt="Copyleft.">&nbsp;2008.
 						</span>
-						<a href="#end"
+						<a href="#end" class="vc-about vt-about"
 							title="Switch to the screen about the program"
 							>About</a>.
 						<a href="http://code.google.com/p/magic-drafting-application/"
+							class="vc-homepage vt-homepage"
 							title="See the application&rsquo;s homepage, where you can find full information on it."
 							>Homepage</a>.
 					</p>
 				</li>
 				<li>
-					<p class="warning">
+					<p class="warning vc-beta1">
 						Notice: the program is in beta status.
 					</p>
-					<p>
+					<p class="vc-beta2">
 						This means that it might make mistakes and you
 							should be ready to continue the draft
 							manually at any time.
 					</p>
-					<p>
+					<p class="vc-beta3">
 						Please <a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Bug%20report"
 							>report all problems</a> you will encounter
 							and <strong>be bold</strong> in doing so!
 						This will help us fix faster.
 					</p>
-					<p>
+					<p class="vc-beta4">
 						If you&rsquo;d like to see a new feature in this
 							application,
 							<a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Feature%20request"
 							>just say so</a> and we will try to make it
 							happen!
 					</p>
-					<p>
+					<p class="vc-beta5">
 						If you have problems reporting, please
 							contact us using this email:
 							<span class="email">drafting@sokolov.cc</span>.
 					</p>
-					<button>I understand.</button>
+					<button class="vc-beta6">I understand.</button>
 				</li>
 				<li>
-					<p>
+					<p class="vc-offline1">
 						To call the draft without the internet,
 							use your browser&rsquo;s
 							‘File &rarr; Save Page’ function.
@@ -140,37 +147,37 @@
 							be updated, while your offline version will stay
 							the same.
 					</p>
-					<button>Noted.</button>
+					<button class="vc-offline2">Noted.</button>
 				</li>
 				<li id="settings">
-					<h1>Settings</h1>
-					<p title="If you draft prepared boosters with the basic land removed, select this option.">
+					<h1 class="vc-settings">Settings</h1>
+					<input id="s-lang" type="hidden" name="lang" value="en">
+					<p
+						class="vt-14cardPack"
+						title="If you draft prepared boosters with the basic land removed, select this option.">
 						<input id="s-14cardPack" type="checkbox">
-						<label for="s-14cardPack">
+						<label for="s-14cardPack" class="vc-14cardPack">
 							Draft 14-card packs
 						</label>
 					</p>
 					<fieldset>
-						<legend>Sets:</legend>
+						<legend class="vc-sets">Sets:</legend>
 						<p class="setCustomizer">
 							<input id="s-set1" value="Shards of Alara">
 							<input id="s-set2" value="Shards of Alara">
 							<input id="s-set3" value="Shards of Alara">
 						</p>
 					</fieldset>
-					<button>Start the draft</button>
-					<!--
-						<p class="info">The settings will be automatically saved in your browser.</p>
-					-->
+					<button class="vc-start">Start the draft</button>
 				</li>
 				<li id="begin">
-					<p>Welcome to the draft.</p>
-					<p>We will draft three boosters &mdash; <span class="v-set1">SET</span>, <span class="v-set2">SET</span> and <span class="v-set3">SET</span>.</p>
-					<p>
+					<p class="vc-begin1">Welcome to the draft.</p>
+					<p class="vc-begin2">We will draft three boosters &mdash; <span class="var-set1">SET</span>, <span class="var-set2">SET</span> and <span class="var-set3">SET</span>.</p>
+					<p class="vc-begin3">
 						Please make sure you have these three packs
 							in front of you.
 					</p>
-					<p>
+					<p class="vc-begin4">
 						During the draft, when I say ‘Look’, you may look
 							at the cards in your hand.
 						I will remind you, when the time is nearly up
@@ -179,120 +186,122 @@
 						If possible, shuffle the cards and lay them out
 							on the table in packs of 3.
 					</p>
-					<button>Continue.</button>
+					<button class="vc-continue">Continue.</button>
 				</li>
 				<li>
-					<p>
+					<p class="vc-explanation1">
 						Between the boosters, you will have some time
 						to review the cards you have drafted that far.
 					</p>
-					<p>
+					<p class="vc-explanation2">
 						During the draft procedure you should stay
 						focused on your cards and try not to give away
 						any kind of information to your opponents.
 					</p>
-					<button>They got it.</button>
+					<button class="vc-theygotit">They got it.</button>
 				</li>
 				<li>
-					<p>
-						Please open the first booster of <span class="v-set1">SET</span>,
+					<p class="vc-open1">
+						Please open the first booster, which is
+							<span class="var-set1">SET</span>,
 							and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="v-cardsInBooster">15</span> cards in there.
+							There should be <span class="var-cardsInBooster">15</span> cards in there.
 					</p>
-					<button>Yes, there are.</button>
+					<button class="vc-thereare">Yes, there are.</button>
 				</li>
 				<li>
-					<p>
-						You will have to pass the first booster to your
+					<p class="vc-passleft">
+						You will have to pass the cards to your
 							<strong>left</strong>.
 					</p>
-					<p>
+					<p class="vc-prepareSilence">
 						Prepare for the draft and keep silence.
 					</p>
-					<button>Begin the draft.</button>
+					<button class="vc-startFirstBooster">Begin the draft.</button>
 				</li>
-				<li class="simpleBooster" title="Booster 1"></li>
+				<li class="simpleBooster vt-booster1" title="Booster 1"></li>
 				<li>
-					<p class="pre" title="3">You now have one minute to review what you have
+					<p class="pre vc-review" title="3">You now have one minute to review what you have
 						drafted.</p>
 					<var>60</var>
-					<p class="pulse" title="10">10 seconds!</p>
-					<samp>Put back the cards.</samp>
-					<button>Done.</button>
+					<p class="pulse vc-10seconds" title="10">10 seconds!</p>
+					<samp class="vc-putcardsback">Put back the cards.</samp>
+					<button class="vc-done">Done.</button>
 				</li>
 				<li>
-					<p>
-						Please open the second booster of <span class="v-set2">SET</span>,
+					<p class="vc-open2">
+						Please open the second booster, which is
+							<span class="var-set2">SET</span>,
 							and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="v-cardsInBooster">15</span> cards in there.
+							There should be <span class="var-cardsInBooster">15</span> cards in there.
 					</p>
-					<p>
+					<p class="vc-passright">
 						You have to pass the cards now to your
 							<strong>right</strong>.
 					</p>
-					<button>Begin drafting the second booster.</button>
+					<button class="vc-startSecondBooster">Begin drafting the second booster.</button>
 				</li>
-				<li class="simpleBooster" title="Booster 2"></li>
+				<li class="simpleBooster vt-booster2" title="Booster 2"></li>
 				<li>
-					<p class="pre" title="3">You now have one minute to review what you have
+					<p class="pre vc-review" title="3">You now have one minute to review what you have
 						drafted.</p>
 					<var>60</var>
-					<p class="pulse" title="10">10 seconds!</p>
-					<samp>Put back the cards.</samp>
-					<button>Done.</button>
+					<p class="pulse vc-10seconds" title="10">10 seconds!</p>
+					<samp class="vc-putcardsback">Put back the cards.</samp>
+					<button class="vc-done">Done.</button>
 				</li>
 				<li>
-					<p>
-						Please open the third booster, <span class="v-set3">SET</span> and count the cards
+					<p class="vc-open3">
+						Please open the third booster, <span class="var-set3">SET</span> and count the cards
 							<strong>face-down</strong>.
-							There should be <span class="v-cardsInBooster">15</span> cards in there.
+							There should be <span class="var-cardsInBooster">15</span> cards in there.
 					</p>
-					<p>
+					<p class="vc-passleft">
 						You have to pass the cards now to your
 							<strong>left</strong>.
 					</p>
-					<button>Begin drafting the third booster.</button>
+					<button class="vc-startThirdBooster">Begin drafting the third booster.</button>
 				</li>
-				<li class="simpleBooster" title="Booster 3"></li>
+				<li class="simpleBooster vt-booster3" title="Booster 3"></li>
 				<li>
-					<p>
+					<p class="vc-draftOver">
 						The draft is now over.
 					</p>
-					<p>
+					<p class="vc-takeCards">
 						Please take your cards and proceed to your sitting
 							place. Try to avoid giving information
 							related to the draft to other players.
 					</p>
-					<button>Finish.</button>
+					<button class="vc-finish">Finish.</button>
 				</li>
 				<li id="end">
-					<h1>About the program</h1>
-					<p>
+					<h1 class="vc-about">About the program</h1>
+					<p class="vc-credits">
 						The program is written by
 						Denis Sokolov &mdash; a level 1 judge from Lithuania
 						(<a href="http://sokolov.cc">homepage</a>).
 					</p>
-					<p>
+					<p class="vc-reportBugs">
 						Please <a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Bug%20report"
 							>report all problems</a> you will encounter
 							and <strong>be bold</strong> in doing so!
 						This will help us fix faster.
 					</p>
-					<p>
+					<p class="vc-offerFeatures">
 						If you&rsquo;d like to see a new feature in this
 							application,
 							<a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Feature%20request"
 							>just say so</a> and we will try to make it
 							happen!
 					</p>
-					<p>
+					<p class="vc-contactEmail">
 						If you have problems using web service, please
 							contact us using this email:
 							<span class="email">drafting@sokolov.cc</span>.
 					</p>
-					<p>
+					<p class="vc-offline1">
 						To save this application and use it offline, use
 							your browser&rsquo;s ‘File &rarr; Save Page’
 							function.
@@ -300,11 +309,11 @@
 							be updated, while your offline version will stay
 							the same.
 					</p>
-					<p>
+					<p class="vc-haveaniceday">
 						Have a nice day!
 					</p>
 					<p>
-						<a href="">Restart the draft</a>.
+						<a href="" class="vc-restartDraft">Restart the draft</a>.
 					</p>
 				</li>
 			</ul>
@@ -324,6 +333,8 @@
 			</noscript>
 		</div></td></tr></table>
 		<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="lang/default.js"></script>
+		<script type="text/javascript" src="lang/extra.js"></script>
 		<script type="text/javascript" src="engine.js"></script>
 	</body>
 </html>

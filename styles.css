@@ -77,3 +77,5 @@ ul { list-style-type: none }
 	.appname { font-size: 60%; line-height: 1em }
 		.appname .version { font-size:120% }
 	.warning { color: #BE0000 }
+
+	.languageSelector img { cursor: pointer; border: 1px solid black; margin-right: 1em }
