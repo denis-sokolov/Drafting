@@ -242,6 +242,7 @@ timers = {
 preparation = {
 	run: function() {
 		settings.save();
+		settings.close();
 		this.templates();
 		this.timers();
 		// Setting the texts in the engine
@@ -331,7 +332,48 @@ preparation = {
 // Limit of 20 cookies
 settings = {
 	get: function(k){
-		var me = $('#'+k);
+		if (this.live)
+			return this.getElementsValue($('#'+k));
+		else
+			return this.cache[k];
+	},
+	set: function(k, v){
+		if (!this.live)
+			console.warn('settings.set was called, but settings are not live!');
+		return this.setElementsValue($('#'+k), v);
+	},
+	close: function(){
+		this.live = false;
+		$('#settings')
+			.find('input', 'select').each(function(){
+				var me = $(this);
+				settings.cache[me.attr('id')]
+					= settings.getElementsValue(me);
+			});
+	},
+
+	// protected below
+	live: true,
+	cache: {},
+	save: function(){
+		$('#settings')
+			.find('input, select').each(function(){
+				var me = $(this);
+				cookies.set(me.attr('id'),
+					settings.getElementsValue(me), 'max');
+			});
+	},
+	load: function(){
+		$('#settings')
+			.find('input, select').each(function(){
+				var me = $(this);
+				var v = cookies.get(me.attr('id'));
+				if (v !== null)
+					settings.setElementsValue(me, v);
+			});
+	},
+
+	getElementsValue: function(me){
 		switch (me.attr('type'))
 		{
 			case 'checkbox':
@@ -339,11 +381,11 @@ settings = {
 			case 'text':
 			case 'hidden':
 				return me.val();
+			default:
+				return null;
 		}
-
 	},
-	set: function(k, v){
-		var me = $('#'+k);
+	setElementsValue: function(me, v){
 		switch (me.attr('type'))
 		{
 			case 'checkbox':
@@ -353,24 +395,9 @@ settings = {
 			case 'hidden':
 				me.val(v);
 				return v;
+			default:
+				return null;
 		}
-	},
-
-	save: function(){
-		$('#settings')
-			.find('input, select').each(function(){
-				var id = $(this).attr('id');
-				cookies.set(id, settings.get(id), 'max');
-			});
-	},
-	load: function(){
-		$('#settings')
-			.find('input, select').each(function(){
-				var id = $(this).attr('id');
-				var v = cookies.get(id);
-				if (v !== null)
-					settings.set(id, v);
-			});
 	}
 }
 
