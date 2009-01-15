@@ -265,7 +265,8 @@ preparation = {
 			//$([5]).each(function(no){
 			$(simpleBooster).each(function(no){
 				var warn = 10;
-				if (this < 15) warn = 5;
+				if (settings.get('s-5seconds') || (this < 15))
+					warn = 5;
 				if (this < 10) warn = 0;
 				content += '<li class="timer">'
 					+'<p class="pre" title="1">'+vocabulary.curr.look+'</p><var>'+this+'</var>';

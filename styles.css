@@ -53,8 +53,10 @@ ul { list-style-type: none }
 /* positioning */
 	.timer { text-align: center }
 	#settings label { margin-left: 1ex }
+	#settings p { margin-bottom: 0.5ex }
 		.setCustomizer { text-align: center }
 		.setCustomizer input { width: 30%; text-align: center }
+
 
 /* appearance */
 	button { padding: 1em 2em; font-size: 150%; width: 100% }
