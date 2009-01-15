@@ -193,6 +193,21 @@ navigation = {
 	}
 };
 
+sounds = {
+	play: function(name) {
+		$('<embed class="sound" src="'+this.getSrc(name)+'" hidden="true" autostart="true">').appendTo('body');
+	},
+	stop: function(name) {
+		if (typeof name == 'undefined')
+			$('embed.sound').remove();
+		else
+			$('embed[src="'+this.getSrc(name)+'"].sound').remove();
+	},
+	getSrc: function(name) {
+		return 'sounds/'+name+'.wav';
+	}
+}
+
 step = {
 	timerHelper: function(remaining) {
 		if (remaining <= 0)
