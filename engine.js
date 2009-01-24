@@ -204,7 +204,7 @@ sounds = {
 			$('embed[src="'+this.getSrc(name)+'"].sound').remove();
 	},
 	getSrc: function(name) {
-		return 'sounds/'+name+'.wav';
+		return 'sounds/'+name+'.ogg';
 	}
 }
 
