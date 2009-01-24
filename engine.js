@@ -363,10 +363,6 @@ settings = {
 					= settings.getElementsValue(me);
 			});
 	},
-
-	// protected below
-	live: true,
-	cache: {},
 	save: function(){
 		$('#settings')
 			.find('input, select').each(function(){
@@ -384,6 +380,10 @@ settings = {
 					settings.setElementsValue(me, v);
 			});
 	},
+
+	// protected below
+	live: true,
+	cache: {},
 
 	getElementsValue: function(me){
 		switch (me.attr('type'))
