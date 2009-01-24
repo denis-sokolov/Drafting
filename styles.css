@@ -81,3 +81,5 @@ ul { list-style-type: none }
 	.warning { color: #BE0000 }
 
 	.languageSelector img { cursor: pointer; border: 1px solid black; margin-right: 1em }
+
+	#settings .warning { font-size: 70%; line-height: 1em; margin-top: -0.5em; display: none }

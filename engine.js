@@ -342,7 +342,24 @@ preparation = {
 };
 
 // Limit of 20 cookies
+$(document).ready(function(){
+	settings.setup();
+});
 settings = {
+	setup: function(){
+		$('#s-sounds').focus(function(){
+			sounds.test(function(sounds){
+				if (!sounds)
+				{
+					$('#soundsNotFound').show('fast');
+					$('#s-sounds').removeAttr('checked');
+				}
+			});
+		})
+		.blur(function(){
+			$('#soundsNotFound').hide('fast');
+		});
+	},
 	get: function(k){
 		if (this.live)
 			return this.getElementsValue($('#'+k));
