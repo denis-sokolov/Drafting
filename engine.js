@@ -205,6 +205,18 @@ sounds = {
 	},
 	getSrc: function(name) {
 		return 'sounds/'+name+'.ogg';
+	},
+	test: function(callback) {
+		$('<img src="sounds/sounds.png">')
+			.load(function(){
+				$(this).remove();
+				callback(true);
+			})
+			.error(function(){
+				$(this).remove();
+				callback(false);
+			})
+			.appendTo('body');
 	}
 }
 
