@@ -172,10 +172,18 @@ navigation = {
 					{
 						timers.set(function(el){
 							el.css('visibility', 'visible').animate({opacity: 0}, 3000);
-							},
-							timeout - me.attr('title')*1000, me);
-						}
+							}, timeout - me.attr('title')*1000, me);
+
+						// 1 second in advance, because sounds lag
+						if (settings.get('s-sounds'))
+							timers.set(function(){
+								sounds.play('almostTime');
+							}, timeout - me.attr('title')*1000 - sounds.lag);
+					}
 				});
+
+				if (settings.get('s-sounds'))
+					timers.set(function(){sounds.play('time');}, timeout - sounds.lag);
 
 				step.timerHelper(timeout);
 
@@ -195,7 +203,8 @@ navigation = {
 
 sounds = {
 	play: function(name) {
-		$('<embed class="sound" src="'+this.getSrc(name)+'" hidden="true" autostart="true">').appendTo('body');
+		$('<embed src="'+this.getSrc(name)+'" style="position:absolute;top:-500px;left:-500px" class="sound" hidden="true" autostart="true">')
+			.appendTo('body');
 	},
 	stop: function(name) {
 		if (typeof name == 'undefined')
@@ -206,6 +215,10 @@ sounds = {
 	getSrc: function(name) {
 		return 'sounds/'+name+'.ogg';
 	},
+
+	// The time between call of sounds.play and the actual sound playing.
+	lag: 500,
+
 	test: function(callback) {
 		$('<img src="sounds/sounds.png" style="display:none">')
 			.load(function(){
