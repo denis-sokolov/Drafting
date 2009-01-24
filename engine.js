@@ -352,7 +352,7 @@ settings = {
 				if (!sounds)
 				{
 					$('#soundsNotFound').show('fast');
-					$('#s-sounds').removeAttr('checked');
+					$('#s-sounds').removeAttr('checked').attr('disabled',true);
 				}
 			});
 		})
