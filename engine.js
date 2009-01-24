@@ -207,7 +207,7 @@ sounds = {
 		return 'sounds/'+name+'.ogg';
 	},
 	test: function(callback) {
-		$('<img src="sounds/sounds.png">')
+		$('<img src="sounds/sounds.png" style="display:none">')
 			.load(function(){
 				$(this).remove();
 				callback(true);
