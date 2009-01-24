@@ -347,18 +347,20 @@ $(document).ready(function(){
 });
 settings = {
 	setup: function(){
-		$('#s-sounds').focus(function(){
-			sounds.test(function(sounds){
-				if (!sounds)
-				{
-					$('#soundsNotFound').show('fast');
-					$('#s-sounds').removeAttr('checked').attr('disabled',true);
-				}
+		$('#s-sounds')
+			.attr('disabled', false)
+			.focus(function(){
+				sounds.test(function(sounds){
+					if (!sounds)
+					{
+						$('#soundsNotFound').show('fast');
+						$('#s-sounds').removeAttr('checked').attr('disabled',true);
+					}
+				});
+			})
+			.blur(function(){
+				$('#soundsNotFound').hide('fast');
 			});
-		})
-		.blur(function(){
-			$('#soundsNotFound').hide('fast');
-		});
 	},
 	get: function(k){
 		if (this.live)
