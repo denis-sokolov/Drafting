@@ -283,7 +283,7 @@ preparation = {
 			var me = $(this);
 			var content = '';
 			var boosterTitle = me.attr('title');
-			var simpleBooster = [35, 35, 35, 25, 25, 25, 20, 20, 20, 10, 10, 5, 5, 5];
+			var simpleBooster = [40, 40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
 
 			if ($('#s-14cardPack').attr('checked'))
 				simpleBooster.shift();
