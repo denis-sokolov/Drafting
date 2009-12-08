@@ -284,9 +284,11 @@ preparation = {
 			var content = '';
 			var boosterTitle = me.attr('title');
 			var simpleBooster = [40, 40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
+			var cardsInBooster = 15;
 
 			if ($('#s-14cardPack').attr('checked'))
 				simpleBooster.shift();
+				cardsInBooster = 14;
 
 			//$([5]).each(function(no){
 			$(simpleBooster).each(function(no){
@@ -301,7 +303,7 @@ preparation = {
 							+vocabulary.curr.seconds.numerify(warn)
 							+'</p>';
 				content += '<samp>'
-						+vocabulary.curr.passCards.numerify(14-no)
+						+vocabulary.curr.passCards.numerify(cardsInBooster-1-no)
 						+'</samp><button>'+vocabulary.curr.passed+'</button>'
 						+'<p class="info">'
 						+vocabulary.curr.cardNum.ordify(no+1)
