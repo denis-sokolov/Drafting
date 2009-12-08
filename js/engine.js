@@ -14,6 +14,15 @@ constants = {
 	tick: 250,
 };
 
+$(document).ready(function(){
+	debug.setup();
+	settings.setup();
+	settings.load();
+	controls.setup();
+	navigation.first();
+	$('.loading').hide();
+});
+
 localize = {
 	run: function(lang){
 		if (lang == 'en')
@@ -50,14 +59,6 @@ localize = {
 		settings.save();
 	}
 };
-
-$(document).ready(function(){
-	debug.setup();
-	settings.load();
-	controls.setup();
-	navigation.first();
-	$('.loading').hide();
-});
 
 controls = {
 	keyboard: function() {
@@ -290,7 +291,6 @@ preparation = {
 				simpleBooster.shift();
 				cardsInBooster = 14;
 
-			//$([5]).each(function(no){
 			$(simpleBooster).each(function(no){
 				var warn = 10;
 				if (settings.get('s-5seconds') || (this < 15))
@@ -356,10 +356,7 @@ preparation = {
 	}
 };
 
-// Limit of 20 cookies
-$(document).ready(function(){
-	settings.setup();
-});
+// Don't forget! Limit of 20 cookies per user.
 settings = {
 	setup: function(){
 		$('#s-sounds')
