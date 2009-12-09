@@ -373,7 +373,6 @@ settings = {
 			.blur(function(){
 				$('#soundsNotFound').hide('fast');
 			});
-		console.debug('foo');
 		$('#s-set1, #s-set2, #s-set3').autocomplete(sets, {
 			minChars: 0,
 			max: 20,
