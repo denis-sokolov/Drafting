@@ -1,541 +1,183 @@
-# Magic drafting application language file
-#
+msgid "title"
+msgstr "Проводим драфт"
 
-#: c-h1
-msgid "Hello, fellow judge, willing to call a Magic draft!"
-msgstr ""
-"Здравствуй, дорогой коллега, желающий "
-"провести драфт!"
+msgid "desc"
+msgstr "Программа для проведения Magic драфтов судъями"
 
-#: c-h2
-msgid ""
-"All you have to do is read the text on the screen and watch the players."
-msgstr ""
-"Всё, что от вас требуется — читать текст с "
-"экрана и следить за игроками."
+msgid "loading"
+msgstr "Загрузка..."
 
-#: c-h3
-msgid ""
-"The program is controlled with a single button on the screen. Simply press a "
-"<strong>space</strong> button on your keyboard to advance."
-msgstr ""
-"Программа контролируется "
-"одной–единственной клавишей "
-"<strong>пробел</strong>."
+msgid "c-h1"
+msgstr "Здравствуй, дорогой коллега, желающий провести драфт!"
 
-#: c-about
-msgid "About the program"
+msgid "c-h2"
+msgstr "Всё, что от вас требуется — читать текст с экрана и следить за игроками."
+
+msgid "c-h3"
+msgstr "Программа контролируется одной–единственной клавишей <strong>пробел</strong>."
+
+msgid "understood"
+msgstr "Понятно. Поехали!"
+
+msgid "about"
 msgstr "О программе"
 
-#: t-about
-msgid "Switch to the screen about the program"
+msgid "t-about"
 msgstr "Переключиться на экран о программе"
 
-#: c-homepage
-msgid "Homepage"
+msgid "homepage"
 msgstr "Сайт проекта"
 
-#: t-homepage
-msgid ""
-"See the application&rsquo;s homepage, where you can find full information on "
-"it."
-msgstr ""
-"Перейти на сайт проект, где расположена "
-"вся информация о нём."
+msgid "t-homepage"
+msgstr "Перейти на сайт проекта, где расположена вся информация о нём."
 
-#: c-beta1
-msgid "Notice: the program is in beta status."
-msgstr ""
-"Внимание: программа находится в бета "
-"версии."
+msgid "offline-notice"
+msgstr "Чтобы использовать программу без интернета, воспользуйтесь функцией «File &rarr; Save Page» вашево браузера. Но, пожалуйста, заглядывайте в интернет, ибо программа будет обновляться, а локальная версия остаётся старой."
 
-#: c-beta2
-msgid ""
-"This means that it might make mistakes and you should be ready to continue "
-"the draft manually at any time."
-msgstr ""
-"Это означает, что она может допускать "
-"ошибки и вы должны быть готовы продолжить "
-"драфт в ручную в любой момент."
-
-#: c-beta3
-msgid ""
-"Please <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-".google.com/p/magic-drafting-application/issues/entry?template=Bug%20report" "
-">report all problems</a> you will encounter and <strong>be bold</strong> in "
-"doing so! This will help us fix faster."
-msgstr ""
-"Пожалуйста, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-".google.com/p/magic-drafting-application/issues/entry?template=Bug%20report" "
-">извещайте о всех проблемах</a>, с которыми "
-"встретитесь, и <strong>будьте нескромны</strong> "
-"в этом! Таки образом мы их быстрее починим."
-
-#: c-beta4
-msgid ""
-"If you&rsquo;d like to see a new feature in this application, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-"."
-"g"
-"o"
-"o"
-"g"
-"le.com/p/magic-drafting-application/issues/entry?template=Feature%20request" "
-">just say so</a> and we will try to make it happen!"
-msgstr ""
-"Если вы желаете увидеть новые "
-"вохможности в этой программе, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-"."
-"g"
-"o"
-"o"
-"g"
-"le.com/p/magic-drafting-application/issues/entry?template=Feature%20request" "
-">дайте знать</a>, и мы постараемся это "
-"реализовать!"
-
-#: c-beta5
-msgid ""
-"If you have problems reporting, please contact us using this email: <span "
-"class="email">drafting@sokolov.cc</span>."
-msgstr ""
-"Если у вас проблемы с контактированием, "
-"используйте наш почтовый адрес: <span "
-"class="email">drafting@sokolov.cc</span>."
-
-#: c-beta6
-msgid "I understand."
-msgstr "Я понимаю."
-
-#: c-offline1
-msgid ""
-"To save this application and use it offline, use your browser&rsquo;s "
-"‘File &rarr; Save Page’ function. But please check back online "
-"sometimes, as it will be updated, while your offline version will stay the "
-"same."
-msgstr ""
-"Чтобы использовать программу без "
-"интернета, воспользуйтесь функцией «File "
-"&rarr; Save Page» вашево браузера. Но, "
-"пожалуйста, заглядывайте в интернет, ибо "
-"программа будет обновляться, а локальная "
-"версия остаётся старой."
-
-#: c-offline2
-msgid "Noted."
+msgid "noted"
 msgstr "Учтено."
 
-#: c-settings
-msgid "Settings"
+msgid "settings"
 msgstr "Настройки"
 
-#: c-14cardPack
-msgid "Draft 14-card packs"
-msgstr "14 карт в пачке"
+msgid "setting-5seconds"
+msgstr "Предупреждать за 5 секунд, а не за 10"
 
-#: c-sets
-msgid "Sets:"
+msgid "setting-sounds"
+msgstr "Звуки"
+
+msgid "setting-sounds-notfound"
+msgstr "Звуки не найдены"
+
+msgid "setting-sounds-download"
+msgstr "Скачайте их"
+
+msgid "setting-sounds-restart"
+msgstr "и <a href="">перегрузите программу</a>"
+
+msgid "sets"
 msgstr "Наборы:"
 
-#: c-start
-msgid "Start the draft"
+msgid "start-draft"
 msgstr "Начать драфт"
 
-#: c-begin1
-msgid "Welcome to the draft."
+msgid "instructions-1"
 msgstr "Добро пожаловать в драфт."
 
-#: c-begin2
-msgid ""
-"We will draft three boosters &mdash; <span class="var-set1">SET</span>, "
-"<span class="var-set2">SET</span> and <span class="var-set3">SET</span>."
-msgstr ""
-"Мы разберём три пачки: <span class="var-set1">SET</span>, "
-"<span class="var-set2">SET</span> and <span class="var-set3">SET</span>."
+msgid "instructions-2"
+msgstr "Мы разберём три пачки:"
 
-#: c-begin3
-msgid "Please make sure you have these three packs in front of you."
-msgstr ""
-"Пожалуйста, удостоверьтесь, что перед "
-"вами есть эти пачки."
+msgid "instructions-2-and"
+msgstr "и"
 
-#: c-begin4
-msgid ""
-"During the draft, when I say ‘Look’, you may look at the cards in your "
-"hand. I will remind you, when the time is nearly up and when I say "
-"‘Pass’, you should pass your cards at once. If possible, shuffle the "
-"cards and lay them out on the table in packs of 3."
-msgstr ""
-"Во время драфта я буду говорить "
-"«смотрим», тогда можно будеть смотреть на "
-"карты в руках. Я извещу, когда время будет "
-"подходить к концу, и, когда я скажу "
-"«передайте», вы должны тут же передать "
-"карты соседу. Если возможно, перемешайте "
-"их и передавайте выкладывая по три."
+msgid "instructions-3"
+msgstr "Пожалуйста, удостоверьтесь, что перед вами есть эти пачки."
 
-#: c-continue
-msgid "Continue."
-msgstr "Продолжить."
+msgid "instructions-4"
+msgstr "Во время драфта я буду говорить «смотрим», тогда можно будеть смотреть на карты в руках. Я извещу, когда время будет подходить к концу, и, когда я скажу «передайте», вы должны тут же передать карты соседу. Если возможно, перемешайте их и передавайте выкладывая по три."
 
-#: c-explanation1
-msgid ""
-"Between the boosters, you will have some time to review the cards you have "
-"drafted that far."
-msgstr ""
-"Между пачками у вас будет некоторое время "
-"просмотреть, что вы уже набрали."
+msgid "continue"
+msgstr "Продолжить"
 
-#: c-explanation2
-msgid ""
-"During the draft procedure you should stay focused on your cards and try not "
-"to give away any kind of information to your opponents."
-msgstr ""
-"Во время драфта старайтесь "
-"концентрироваться на картах и не "
-"выдавать никакой информации соперникам."
+msgid "instructions-5"
+msgstr "Между пачками у вас будет некоторое время просмотреть, что вы уже набрали."
 
-#: c-theygotit
-msgid "They got it."
-msgstr "Они поняли."
+msgid "instructions-6"
+msgstr "Во время драфта старайтесь концентрироваться на картах и не выдавать никакой информации соперникам."
 
-#: c-open1
-msgid ""
-"Please open the first booster, which is <span class="var-set1">SET</span>, "
-"and count the cards <strong>face-down</strong>. There should be <span "
-"class="var-cardsInBooster">15</span> cards in there."
-msgstr ""
-"Откройте первый бустер, <span "
-"class="var-set1">SET</span>, и пересчитайте карты "
-"<strong>рубашками вверх</strong>. Там должно быть "
-"<span class="var-cardsInBooster">15</span> карт."
+msgid "they-got-it"
+msgstr "Они поняли"
 
-#: c-thereare
-msgid "Yes, there are."
+msgid "open-first"
+msgstr "Откройте первую пачку,"
+
+msgid "open-first-2"
+msgstr ", и пересчитайте карты <strong>рубашками вверх</strong>. Там должно быть 14 карт."
+
+msgid "open-second"
+msgstr "Откройте вторую пачку,"
+
+msgid "open-second-2"
+msgstr ", и пересчитайте карты <strong>рубашками вверх</strong>. Там должно быть 14 карт."
+
+msgid "open-third"
+msgstr "Откройте третью пачку,"
+
+msgid "open-third-2"
+msgstr ", и пересчитайте карты <strong>рубашками вверх</strong>. Там должно быть 14 карт."
+
+msgid "yes-there-are"
 msgstr "Так и есть."
 
-#: c-passleft
-msgid "You have to pass the cards now to your <strong>left</strong>."
-msgstr ""
-"Передавать карты надо будет "
-"<strong>налево</strong>."
+msgid "pass-left"
+msgstr "Передавать карты надо будет <strong>налево</strong>."
 
-#: c-prepareSilence
-msgid "Prepare for the draft and keep silence."
-msgstr ""
-"Приготовтесь к драфту и храните молчание."
+msgid "pass-right"
+msgstr "Передавать карты надо будет <strong>направо</strong>."
 
-#: c-startFirstBooster
-msgid "Begin the draft."
+msgid "prepare-and-silence"
+msgstr "Приготовтесь к драфту и храните молчание."
+
+msgid "begin-draft"
 msgstr "Начать драфт."
 
-#: t-booster1
-msgid "Booster 1"
+msgid "begin-second-booster"
+msgstr "Начать вторую пачку"
+
+msgid "begin-third-booster"
+msgstr "Начать третью пачку"
+
+msgid "booster-1"
 msgstr "Первая пачка"
 
-#: c-review
-msgid "You now have one minute to review what you have drafted."
-msgstr ""
-"У вас есть одна минута, чтобы "
-"пересмотреть, что вы набрали."
-
-#: c-10seconds
-msgid "10 seconds!"
-msgstr "10 секунд!"
-
-#: c-putcardsback
-msgid "Put back the cards."
-msgstr "Положите карты на место."
-
-#: c-done
-msgid "Done."
-msgstr "Готово."
-
-#: c-open2
-msgid ""
-"Please open the second booster, which is <span class="var-set2">SET</span>, "
-"and count the cards <strong>face-down</strong>. There should be <span "
-"class="var-cardsInBooster">15</span> cards in there."
-msgstr ""
-"Откройте второй бустер, <span "
-"class="var-set2">SET</span>, и пересчитайте карты "
-"<strong>рубашками вверх</strong>. Там должно быть "
-"<span class="var-cardsInBooster">15</span> карт."
-
-#: c-passright
-msgid "You have to pass the cards now to your <strong>right</strong>."
-msgstr ""
-"Передавать карты надо будет "
-"<strong>направо</strong>."
-
-#: c-startSecondBooster
-msgid "Begin drafting the second booster."
-msgstr "Начать со второй пачкой."
-
-#: t-booster2
-msgid "Booster 2"
+msgid "booster-2"
 msgstr "Вторая пачка"
 
-#: c-open3
-msgid ""
-"Please open the third booster, <span class="var-set3">SET</span> and count "
-"the cards <strong>face-down</strong>. There should be <span "
-"class="var-cardsInBooster">15</span> cards in there."
-msgstr ""
-"Откройте третий бустер, <span "
-"class="var-set3">SET</span>, и пересчитайте карты "
-"<strong>рубашками вверх</strong>. Там должно быть "
-"<span class="var-cardsInBooster">15</span> карт."
-
-#: c-startThirdBooster
-msgid "Begin drafting the third booster."
-msgstr "Начать с третьей пачкой."
-
-#: t-booster3
-msgid "Booster 3"
+msgid "booster-3"
 msgstr "Третья пачка"
 
-#: c-draftOver
-msgid "The draft is now over."
-msgstr "Драфт окончен."
-
-#: c-takeCards
-msgid ""
-"Please take your cards and proceed to your sitting place. Try to avoid "
-"giving information related to the draft to other players."
-msgstr ""
-"Возьмите свои карты и займите свои места. "
-"Старайтесь не делиться информацией о "
-"драфте с другими игроками."
-
-#: c-finish
-msgid "Finish."
-msgstr "Конец."
-
-#: c-credits
-msgid ""
-"The program is written by Denis Sokolov &mdash; a level 1 judge from "
-"Lithuania (<a href="http://sokolov.cc">homepage</a>)."
-msgstr ""
-"Программа написана Денисом Соколовым — "
-"судьей первого уровня из Литвы (<a "
-"href="http://sokolov.cc">домашняя страница</a>)."
-
-#: c-reportBugs
-msgid ""
-"Please <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-".google.com/p/magic-drafting-application/issues/entry?template=Bug%20report" "
-">report all problems</a> you will encounter and <strong>be bold</strong> in "
-"doing so! This will help us fix faster."
-msgstr ""
-"Пожалуйста, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-".google.com/p/magic-drafting-application/issues/entry?template=Bug%20report" "
-">извещайте о всех проблемах</a>, с которыми "
-"встретитесь, и <strong>будьте нескромны</strong> "
-"в этом! Таки образом мы их быстрее починим."
-
-#: c-offerFeatures
-msgid ""
-"If you&rsquo;d like to see a new feature in this application, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-"."
-"g"
-"o"
-"o"
-"g"
-"le.com/p/magic-drafting-application/issues/entry?template=Feature%20request" "
-">just say so</a> and we will try to make it happen!"
-msgstr ""
-"Если вы желаете увидеть новые "
-"вохможности в этой программе, <a "
-"h"
-"r"
-"e"
-"f"
-"="
-"""
-"h"
-"t"
-"t"
-"p"
-":"
-"/"
-"/"
-"c"
-"o"
-"d"
-"e"
-"."
-"g"
-"o"
-"o"
-"g"
-"le.com/p/magic-drafting-application/issues/entry?template=Feature%20request" "
-">дайте знать</a>, и мы постараемся это "
-"реализовать!"
-
-#: c-contactEmail
-msgid ""
-"If you have problems using web service, please contact us using this email: "
-"<span class="email">drafting@sokolov.cc</span>."
-msgstr ""
-"Если у вас проблемы с контактированием, "
-"используйте наш почтовый адрес: <span "
-"class="email">drafting@sokolov.cc</span>."
-
-#: c-haveaniceday
-msgid "Have a nice day!"
-msgstr "Удачи!"
-
-#: c-restartDraft
-msgid "Restart the draft"
-msgstr "Начать драфт заново"
-
-#: j-look
-msgid "Look!"
+msgid "look"
 msgstr "Смотрим!"
 
-#: j-seconds
-msgid "%n %t!|second/seconds"
-msgstr "%n %t!|секунда/секунды/секунд"
+msgid "review-30"
+msgstr "У вас есть 30 секунд просмотреть, что вы набрали."
 
-#: j-passed
-msgid "Done!"
-msgstr "Готово!"
+msgid "review-45"
+msgstr "У вас есть 45 секунд просмотреть, что вы набрали."
 
-#: j-passCards
-msgid "Pass %n %t.|card/cards"
-msgstr "Передайте %n %t.|карту/карты/карт"
+msgid "10-seconds"
+msgstr "10 секунд!"
 
-#: j-cardNum
-msgid "%n%t card"
-msgstr "%n-ая карта"
+msgid "5-seconds"
+msgstr "5 секунд!"
 
-#: j-restartTimer
-msgid "Restart this timer"
-msgstr "Перезапустить этот таймер"
+msgid "put-back"
+msgstr "Положите карты на место."
 
-#: j-skipTimer
-msgid "Skip this timer"
-msgstr "Пропустить этот таймер"
+msgid "done"
+msgstr "Готово."
 
-#: c-understood
-msgid "Understood. Let&rsquo;s go!"
-msgstr "Понятно. Поехали!"
+msgid "draft-over"
+msgstr "Драфт окончен."
+
+msgid "take-and-sit"
+msgstr "Возьмите свои карты и займите свои места. Старайтесь не делиться информацией о драфте с другими игроками."
+
+msgid "finish"
+msgstr "Конец."
+
+msgid "about-title"
+msgstr "О программе"
+
+msgid "restart-timer"
+msgstr "Перезапустить таймер"
+
+msgid "skip-timer"
+msgstr "Пропустить таймер"
+
+msgid "pass-cards"
+msgstr "Передайте (N карту/карты/карт)."
+
+msgid "card-number"
+msgstr "(N) карта"
+

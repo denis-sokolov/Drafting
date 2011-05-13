@@ -1,0 +1,183 @@
+msgid "title"
+msgstr "Drafting timer"
+
+msgid "desc"
+msgstr "An application for a judge calling a draft in a Magic game."
+
+msgid "loading"
+msgstr "Loading the application..."
+
+msgid "c-h1"
+msgstr "Hello, fellow judge, willing to call a Magic draft!"
+
+msgid "c-h2"
+msgstr "All you have to do is read the text on the screen and watch the players."
+
+msgid "c-h3"
+msgstr "The program is controlled with a single button on the screen. Simply press a <strong>space</strong> button on your keyboard to advance."
+
+msgid "understood"
+msgstr "Understood. Let&rsquo;s go!"
+
+msgid "about"
+msgstr "About"
+
+msgid "t-about"
+msgstr "Switch to the screen about the program"
+
+msgid "homepage"
+msgstr "Homepage"
+
+msgid "t-homepage"
+msgstr "See the application’s homepage, where you can find full information on it."
+
+msgid "offline-notice"
+msgstr "To save this application and use it offline, use your browser&rsquo;s ‘File &rarr; Save Page’ function. But please check back online sometimes, as it will be updated, while your offline version will stay the same."
+
+msgid "noted"
+msgstr "Noted."
+
+msgid "settings"
+msgstr "Settings"
+
+msgid "setting-5seconds"
+msgstr "Warning in 5 seconds instead of 10"
+
+msgid "setting-sounds"
+msgstr "Sounds"
+
+msgid "setting-sounds-notfound"
+msgstr "I have not found any sounds."
+
+msgid "setting-sounds-download"
+msgstr "Download them"
+
+msgid "setting-sounds-restart"
+msgstr "and <a href="">restart the application</a>"
+
+msgid "sets"
+msgstr "Sets:"
+
+msgid "start-draft"
+msgstr "Start the draft"
+
+msgid "instructions-1"
+msgstr "Welcome to the draft."
+
+msgid "instructions-2"
+msgstr "We will draft three boosters &mdash;"
+
+msgid "instructions-2-and"
+msgstr "and"
+
+msgid "instructions-3"
+msgstr "Please make sure you have these three packs in front of you."
+
+msgid "instructions-4"
+msgstr "During the draft, when I say ‘Look’, you may look at the cards in your hand. I will remind you, when the time is nearly up 	and when I say ‘Pass’, you should pass your cards at once. If possible, shuffle the cards and lay them out on the table in packs of 3."
+
+msgid "continue"
+msgstr "Continue"
+
+msgid "instructions-5"
+msgstr "Between the boosters, you will have some time to review the cards you have drafted that far."
+
+msgid "instructions-6"
+msgstr "During the draft procedure you should stay focused on your cards and try not to give away any kind of information to your opponents."
+
+msgid "they-got-it"
+msgstr "They got it"
+
+msgid "open-first"
+msgstr "Please open the first booster, which is"
+
+msgid "open-first-2"
+msgstr ", and count the cards <strong>face-down</strong>. There should be 14 cards in there."
+
+msgid "open-second"
+msgstr "Please open the second booster, which is"
+
+msgid "open-second-2"
+msgstr ", and count the cards <strong>face-down</strong>. There should be 14 cards in there."
+
+msgid "open-third"
+msgstr "Please open the third booster, which is"
+
+msgid "open-third-2"
+msgstr ", and count the cards <strong>face-down</strong>. There should be 14 cards in there."
+
+msgid "yes-there-are"
+msgstr "Yes, there are."
+
+msgid "pass-left"
+msgstr "You have to pass the cards now to your <strong>left</strong>."
+
+msgid "pass-right"
+msgstr "You have to pass the cards now to your <strong>right</strong>."
+
+msgid "prepare-and-silence"
+msgstr "Prepare for the draft and keep silence."
+
+msgid "begin-draft"
+msgstr "Begin the draft."
+
+msgid "begin-second-booster"
+msgstr "Begin drafting the second booster"
+
+msgid "begin-third-booster"
+msgstr "Begin drafting the third booster"
+
+msgid "booster-1"
+msgstr "Booster 1"
+
+msgid "booster-2"
+msgstr "Booster 2"
+
+msgid "booster-3"
+msgstr "Booster 3"
+
+msgid "look"
+msgstr "Look!"
+
+msgid "review-30"
+msgstr "You now have 30 seconds to review what you have drafted."
+
+msgid "review-45"
+msgstr "You now have 45 seconds to review what you have drafted."
+
+msgid "10-seconds"
+msgstr "10 seconds!"
+
+msgid "5-seconds"
+msgstr "5 seconds!"
+
+msgid "put-back"
+msgstr "Put back the cards."
+
+msgid "done"
+msgstr "Done."
+
+msgid "draft-over"
+msgstr "The draft is now over."
+
+msgid "take-and-sit"
+msgstr "Please take your cards and proceed to your sitting place. Try to avoid giving information related to the draft to other players."
+
+msgid "finish"
+msgstr "Finish."
+
+msgid "about-title"
+msgstr "About the program"
+
+msgid "restart-timer"
+msgstr "Restart timer"
+
+msgid "skip-timer"
+msgstr "Skip timer"
+
+msgid "pass-cards"
+msgstr "Pass (N card/cards)."
+
+msgid "card-number"
+msgstr "(N) card"
+

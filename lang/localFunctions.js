@@ -1,0 +1,43 @@
+localFunctions = {
+	en: {
+		ord: function(num, texts) {
+			switch(num%100)
+			{
+				case 11:
+				case 12:
+				case 13: return num+'th';
+				default:
+					switch(num%10)
+					{
+						case 1: return num+'st';
+						case 2: return num+'nd';
+						case 3: return num+'rd';
+						default: return num+'th';
+					}
+			}
+		},
+		num: function(num, texts) { if (num == 1) return num+' '+texts[0]; else return num+' '+texts[1]; },
+	},
+	ru: {
+		ord: function(num, texts) { return num+' '+texts[0]; },
+		num: function(num, texts) {
+			switch (num%100)
+			{
+				case 11:
+				case 12:
+				case 13:
+				case 14: return num+' '+texts[2];
+				default:
+					switch(num%10)
+					{
+						case 1: return num+' '+texts[0];
+						case 2:
+						case 3:
+						case 4: return num+' '+texts[1];
+						default: return num+' '+texts[2];
+					}
+
+			}
+		}
+	},
+};

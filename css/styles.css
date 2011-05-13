@@ -49,6 +49,7 @@ ul { list-style-type: none }
 /* logic */
 	#steps li { display: none }
 	#steps li.current { display: block }
+	#templates, #vocabulary { display: none }
 
 /* positioning */
 	.timer { text-align: center }
@@ -56,6 +57,7 @@ ul { list-style-type: none }
 	#settings p { margin-bottom: 0.5ex }
 		.setCustomizer { text-align: center }
 		.setCustomizer input { width: 30%; text-align: center }
+	.info p:first-child { margin-bottom: 0 }
 
 
 /* appearance */

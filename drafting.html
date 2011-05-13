@@ -16,11 +16,11 @@
 <html lang="en">
 	<head>
 		<title>
-			Drafting timer application
+			[title]
 		</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="description"
-				content="An application for a judge calling a draft in a Magic game.">
+				content="[desc]">
 		<meta name="author" content="Denis Sokolov">
 		<meta name="robots" content="all">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -32,7 +32,7 @@
 	<body>
 		<table><tr><td><div id="content">
 			<p class="loading">
-				Loading the application...
+				[loading]
 			</p>
 			<!--[if IE]>
 				<p class="loading warning">
@@ -57,7 +57,7 @@
 						The browser is unbelievably unfriendly to both
 							users and developers.
 						It&rsquo;s behaviour is unexpected and unpredictable.
-						Thus I give no guarantee, how the application will
+						I give no guarantee, how the application will
 							work under this browser.
 					</p>
 					<p>
@@ -74,226 +74,123 @@
 				</li>
 				<![endif]-->
 				<li>
-					<p class="languageSelector">
-						<img src="flags/en.png" alt="en"
-							title="Switch to English language">
-						<img src="flags/ru.png" alt="ru"
-							title="Переключиться на русский язык">
-					</p>
-					<p class="vc-h1">
-						Hello, fellow judge, willing to call a Magic draft!
-					</p>
-					<p class="vc-h2">
-						All you have to do is read the
-							text on the screen and watch the players.
-					</p>
-					<p class="vc-h3">
-						The program is controlled with a single button
-							on the screen.
-						Simply press a <strong>space</strong> button on
-							your keyboard to advance.
-					</p>
-					<button class="vc-understood">Understood. Let&rsquo;s go!</button>
+					<p>[c-h1]</p>
+					<p>[c-h2]</p>
+					<p>[c-h3]</p>
+					<button>[understood]</button>
 					<p class="appname">
 						Magic drafting application version
 							<span class="version"
-								title="Released on the 9th of December, 2009">0.7</span>.
+								title="Released on 2011-05-14">1.0</span>.
 						<span title="The program is licensed under GPL 3">
-							<img src="copyleft.png" alt="Copyleft.">&nbsp;2009.
+							<img src="img/copyleft.png" alt="Copyleft.">&nbsp;2011.
 						</span>
-						<a href="#end" class="vc-about vt-about"
-							title="Switch to the screen about the program"
-							>About</a>.
+						<a href="#end" title="[t-about]">[about]</a>.
 						<a href="http://code.google.com/p/magic-drafting-application/"
-							class="vc-homepage vt-homepage"
-							title="See the application&rsquo;s homepage, where you can find full information on it."
-							>Homepage</a>.
+							title="[t-homepage]"
+							>[homepage]</a>.
 					</p>
 				</li>
 				<li>
-					<p class="warning vc-beta1">
-						Notice: the program is in beta status.
-					</p>
-					<p class="vc-beta2">
-						This means that it might make mistakes and you
-							should be ready to continue the draft
-							manually at any time.
-					</p>
-					<p class="vc-beta3">
-						Please <a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Bug%20report"
-							>report all problems</a> you will encounter
-							and <strong>be bold</strong> in doing so!
-						This will help us fix faster.
-					</p>
-					<p class="vc-beta4">
-						If you&rsquo;d like to see a new feature in this
-							application,
-							<a href="http://code.google.com/p/magic-drafting-application/issues/entry?template=Feature%20request"
-							>just say so</a> and we will try to make it
-							happen!
-					</p>
-					<p class="vc-beta5">
-						If you have problems reporting, please
-							contact us using this email:
-							<span class="email">drafting@sokolov.cc</span>.
-					</p>
-					<button class="vc-beta6">I understand.</button>
-				</li>
-				<li>
-					<p class="vc-offline1">
-						To call the draft without the internet,
-							use your browser&rsquo;s
-							‘File &rarr; Save Page’ function.
-						But please check back online sometimes, as it will
-							be updated, while your offline version will stay
-							the same.
-					</p>
-					<button class="vc-offline2">Noted.</button>
+					<p>[offline-notice]</p>
+					<button>[noted]</button>
 				</li>
 				<li id="settings">
-					<h1 class="vc-settings">Settings</h1>
-					<input id="s-lang" type="hidden" name="lang" value="en">
-					<p
-						class="vt-5seconds"
-						title="If you would like the application to warn when 5 seconds are remaining till the end of the time, select this option.">
+					<h1>[settings]</h1>
+					<p>
 						<input id="s-5seconds" type="checkbox">
-						<label for="s-5seconds" class="vc-5seconds">
-							Warning in 5 seconds instead of 10
+						<label for="s-5seconds">
+							[setting-5seconds]
 						</label>
 					</p>
 					<p
-						class="vt-soundsSetting"
 						title="The application will make certain sounds (like the 10-seconds beep), if this option is enabled.">
 						<input id="s-sounds" type="checkbox">
-						<label for="s-sounds" class="vc-soundsSetting">
-							Sounds
+						<label for="s-sounds">
+							[setting-sounds]
 						</label>
 					</p>
-					<p id="soundsNotFound" class="warning vc-soundsNotFound">
-						(I have not found any sounds.
+					<p id="soundsNotFound" class="warning">
+						([setting-sounds-notfound]
 						<a
-							href="http://code.google.com/p/magic-drafting-application/wiki/Sounds"
-							>Download them</a>
-						and <a href="">restart the application</a>.)
+							href="https://github.com/Akral/PyHtmlify/wiki/Sounds"
+							>[setting-sounds-download]</a>
+						[setting-sounds-restart].)
 					</p>
 					<fieldset>
-						<legend class="vc-sets">Sets:</legend>
+						<legend>[sets]</legend>
 						<p class="setCustomizer">
 							<input id="s-set1" value="">
 							<input id="s-set2" value="">
 							<input id="s-set3" value="">
 						</p>
 					</fieldset>
-					<button class="vc-start">Start the draft</button>
+					<button>[start-draft]</button>
 				</li>
 				<li id="begin">
-					<p class="vc-begin1">Welcome to the draft.</p>
-					<p class="vc-begin2">We will draft three boosters &mdash; <span class="var-set1">SET</span>, <span class="var-set2">SET</span> and <span class="var-set3">SET</span>.</p>
-					<p class="vc-begin3">
-						Please make sure you have these three packs
-							in front of you.
-					</p>
-					<p class="vc-begin4">
-						During the draft, when I say ‘Look’, you may look
-							at the cards in your hand.
-						I will remind you, when the time is nearly up
-							and when I say ‘Pass’, you should pass your
-							cards at once.
-						If possible, shuffle the cards and lay them out
-							on the table in packs of 3.
-					</p>
-					<button class="vc-continue">Continue.</button>
+					<p>[instructions-1]</p>
+					<p>[instructions-2] <span class="var-set1">SET</span>, <span class="var-set2">SET</span> [instructions-2-and] <span class="var-set3">SET</span>.</p>
+					<p>[instructions-3]</p>
+					<p>[instructions-4]</p>
+					<button>[continue]</button>
 				</li>
 				<li>
-					<p class="vc-explanation1">
-						Between the boosters, you will have some time
-						to review the cards you have drafted that far.
-					</p>
-					<p class="vc-explanation2">
-						During the draft procedure you should stay
-						focused on your cards and try not to give away
-						any kind of information to your opponents.
-					</p>
-					<button class="vc-theygotit">They got it.</button>
+					<p>[instructions-5]</p>
+					<p>[instructions-6]</p>
+					<button>[they-got-it]</button>
 				</li>
 				<li>
-					<p class="vc-open1">
-						Please open the first booster, which is
-							<span class="var-set1">SET</span>,
-							and count the cards
-							<strong>face-down</strong>.
-							There should be <span class="var-cardsInBooster">14</span> cards in there.
+					<p>
+						[open-first]
+						<span class="var-set1">SET</span>[open-first-2]
 					</p>
-					<button class="vc-thereare">Yes, there are.</button>
+					<button>[yes-there-are]</button>
 				</li>
 				<li>
-					<p class="vc-passleft">
-						You will have to pass the cards to your
-							<strong>left</strong>.
-					</p>
-					<p class="vc-prepareSilence">
-						Prepare for the draft and keep silence.
-					</p>
-					<button class="vc-startFirstBooster">Begin the draft.</button>
+					<p>[pass-left]</p>
+					<p>[prepare-and-silence]</p>
+					<button>[begin-draft]</button>
 				</li>
-				<li class="simpleBooster vt-booster1" title="Booster 1"></li>
+				<li class="simpleBooster" title="[booster-1]"></li>
 				<li>
-					<p class="pre vc-review30" title="3">You now have 30 seconds to review what you have
-						drafted.</p>
+					<p class="pre" title="3">[review-30]</p>
 					<var>30</var>
-					<p class="pulse vc-10seconds" title="10">10 seconds!</p>
-					<samp class="vc-putcardsback">Put back the cards.</samp>
-					<button class="vc-done">Done.</button>
+					<p class="pulse" title="10">[10-seconds]</p>
+					<samp>[put-back]</samp>
+					<button>[done]</button>
 				</li>
 				<li>
-					<p class="vc-open2">
-						Please open the second booster, which is
-							<span class="var-set2">SET</span>,
-							and count the cards
-							<strong>face-down</strong>.
-							There should be <span class="var-cardsInBooster">14</span> cards in there.
+					<p>
+						[open-second]
+						<span class="var-set2">SET</span>[open-second-2]
 					</p>
-					<p class="vc-passright">
-						You have to pass the cards now to your
-							<strong>right</strong>.
-					</p>
-					<button class="vc-startSecondBooster">Begin drafting the second booster.</button>
+					<p>[pass-right]</p>
+					<button>[begin-second-booster]</button>
 				</li>
-				<li class="simpleBooster vt-booster2" title="Booster 2"></li>
+				<li class="simpleBooster" title="[booster-2]"></li>
 				<li>
-					<p class="pre vc-review45" title="3">You now have 45 seconds to review what you have
-						drafted.</p>
+					<p class="pre" title="3">[review-45]</p>
 					<var>45</var>
-					<p class="pulse vc-10seconds" title="10">10 seconds!</p>
-					<samp class="vc-putcardsback">Put back the cards.</samp>
-					<button class="vc-done">Done.</button>
+					<p class="pulse" title="10">[10-seconds]</p>
+					<samp>[put-back]</samp>
+					<button>[done]</button>
 				</li>
 				<li>
-					<p class="vc-open3">
-						Please open the third booster, <span class="var-set3">SET</span> and count the cards
-							<strong>face-down</strong>.
-							There should be <span class="var-cardsInBooster">14</span> cards in there.
+					<p>
+						[open-third]
+						<span class="var-set3">SET</span>[open-third-2]
 					</p>
-					<p class="vc-passleft">
-						You have to pass the cards now to your
-							<strong>left</strong>.
-					</p>
-					<button class="vc-startThirdBooster">Begin drafting the third booster.</button>
+					<p>[pass-left]</p>
+					<button>[begin-third-booster]</button>
 				</li>
-				<li class="simpleBooster vt-booster3" title="Booster 3"></li>
+				<li class="simpleBooster" title="[booster-3]"></li>
 				<li>
-					<p class="vc-draftOver">
-						The draft is now over.
-					</p>
-					<p class="vc-takeCards">
-						Please take your cards and proceed to your sitting
-							place. Try to avoid giving information
-							related to the draft to other players.
-					</p>
-					<button class="vc-finish">Finish.</button>
+					<p>[draft-over]</p>
+					<p>[take-and-sit]</p>
+					<button>[finish]</button>
 				</li>
 				<li id="end">
-					<h1 class="vc-about">About the program</h1>
+					<h1>[about-title]</h1>
 					<h2>Credits</h2>
 						<p class="vc-credits">
 							The program is written by
@@ -341,6 +238,28 @@
 					</p>
 				</li>
 			</ul>
+			<div id="templates">
+				<div class="simpleBoosterStep">
+					<p class="pre" title="1">[look]</p>
+					<var></var>
+					<p class="warn pulse"></p>
+					<samp></samp>
+					<button>[done]</button>
+					<div class="info">
+						<p class="card"></p>
+						<p class="booster"></p>
+					</div>
+				</div>
+			</div>
+			<div id="vocabulary">
+				<div title="restartTimer">[restart-timer]</div>
+				<div title="skipTimer">[skip-timer]</div>
+				<div title="5seconds">[5-seconds]</div>
+				<div title="10seconds">[10-seconds]</div>
+				<div title="langCode">[lang-code]</div>
+				<div title="passCards">[pass-cards]</div>
+				<div title="cardNumber">[card-number]</div>
+			</div>
 			<noscript>
 				<p>
 					The application is written in JavaScript and cannot
@@ -351,16 +270,15 @@
 						problems and security and share them.
 				</p>
 				<p>
-					However, this application really requires it, as it
+					However, this application really requires it, as it is
 						written completely in JavaScript.
 				</p>
 			</noscript>
 		</div></td></tr></table>
-		<script type="text/javascript" src="js/jquery-1.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
 		<script type="text/javascript" src="js/jquery.autocomplete.pack.js"></script>
 		<script type="text/javascript" src="mtg-data.js"></script>
-		<script type="text/javascript" src="lang/default.js"></script>
-		<script type="text/javascript" src="lang/extra.js"></script>
+		<script type="text/javascript" src="lang/localFunctions.js"></script>
 		<script type="text/javascript" src="js/engine.js"></script>
 	</body>
 </html>

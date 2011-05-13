@@ -23,42 +23,62 @@ $(document).ready(function(){
 	$('.loading').hide();
 });
 
-localize = {
-	run: function(lang){
-		if (lang == 'en')
-		{
-			settings.set('s-lang', 'en');
-			settings.save();
-			window.location = window.location;
-			return false;
-		}
 
-		if (typeof vocabulary.extra[lang] != 'undefined')
-			for (i in vocabulary.extra.keys)
+debug = {
+	state: false,
+	on: function() { this.state = true; },
+	off: function() { this.state = false; },
+	setup: function(){
+		if (this.state)
 		{
-			var key = vocabulary.extra.keys[i];
-			var string = vocabulary.extra[lang][i];
-			var type = key[0];
-			key = key.substring(2);
-			switch (type)
-			{
-				case 'c':
-					$('.vc-'+key).html(string);
-				break;
-				case 't':
-					$('.vt-'+key).attr('title', string);
-				break;
-				case 'j':
-					vocabulary[lang][key] = string;
-				break;
-			}
+			$('body').addClass('debug').append('<div class="debugMessage">Debug mode is on.'
+				+' <a>Turn off.</a></div>');
+			$('.debugMessage a').click(function(){
+				$(this).parent().hide('slow');
+				debug = false;
+			});
 		}
-
-		vocabulary.curr = vocabulary[lang];
-		settings.set('s-lang', lang);
-		settings.save();
 	}
-};
+}
+
+vocabulary = (function(){
+	var voc = {}
+	// Let's find "(N card/cards)" pattern.
+	var reg = /\(N([^\)]*)\)/;
+	$('#vocabulary').children().each(function(){
+		var me = $(this);
+		var t = me.text();
+		var name = me.attr('title');
+		if (t.indexOf('(N') < 0)
+		{ // Do not engage regexp, indexOf is faster
+			if (name == 'langCode' && t == '[lang-code]')
+			{
+				t = 'en';
+				debug.on();
+			}
+			voc[name] = t;
+		}
+		else
+		{
+			voc[name] = [
+				t.replace(reg, '(N)'), // Remove regex for an easy win
+				reg.exec(t)[1].split('/') // Store all the possibilities
+			];
+		}
+	});
+
+	return {
+		'get': function(par){ return voc[par]; },
+		'numerify': function(par, number) {
+			return voc[par][0].replace('(N)',
+				localFunctions[voc['langCode']].num(number, voc[par][1]));
+		},
+		'ordify': function(par, number) {
+			return voc[par][0].replace('(N)',
+				localFunctions[voc['langCode']].ord(number, voc[par][1]));
+		}
+	}
+}());
 
 controls = {
 	keyboard: function() {
@@ -75,15 +95,6 @@ controls = {
 					break;
 				}
 			}
-		});
-	},
-
-	language: function() {
-		var l = settings.get('s-lang');
-		if (typeof l == 'string' && l != 'en') localize.run(l);
-
-		$('.languageSelector img').click(function(){
-			localize.run($(this).attr('alt'));
 		});
 	},
 
@@ -105,25 +116,7 @@ controls = {
 		this.keyboard();
 		this.mouse();
 		this.internalLinks();
-		this.language();
 	},
-}
-
-debug = {
-	state: false,
-	on: function() { this.state = true; },
-	off: function() { this.state = false; },
-	setup: function(){
-		if (this.state)
-		{
-			$('body').addClass('debug').append('<div class="debugMessage">Debug mode is on.'
-				+' <a>Turn off.</a></div>');
-			$('.debugMessage a').click(function(){
-				$(this).parent().hide('slow');
-				debug = false;
-			});
-		}
-	}
 }
 
 navigation = {
@@ -277,37 +270,41 @@ preparation = {
 	},
 
 	templates: function(){
-		/* Template steps */
+		/* Simple Booster */
+		var content = $('<div/>');
+		var step = $('#templates .simpleBoosterStep');
+		var simpleBooster = [40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
+		var cardsInBooster = 14;
+
+		$(simpleBooster).each(function(no){
+			var result = $('<li class="timer"/>');
+			result.append(step.clone().children());
+
+			var warn = 10;
+			if (settings.get('s-5seconds') || (this < 15))
+				warn = 5;
+			if (this < 10) warn = 0;
+
+			result.find('var').text(Number(this));
+			result.find('samp').text(vocabulary.numerify('passCards', cardsInBooster-1-no));
+			result.find('.info .card').text(vocabulary.ordify('cardNumber', no+1))
+
+			if (warn > 0)
+				result.find('.pulse').attr('title', warn).text(vocabulary.get(warn + 'seconds'));
+			else
+				result.find('.pulse').remove();
+
+			content.append(result);
+		});
+
 		$('li.simpleBooster').each(function(){
 			var me = $(this);
-			var content = '';
-			var boosterTitle = me.attr('title');
-			var simpleBooster = [40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
-			var cardsInBooster = 15;
-
-			$(simpleBooster).each(function(no){
-				var warn = 10;
-				if (settings.get('s-5seconds') || (this < 15))
-					warn = 5;
-				if (this < 10) warn = 0;
-				content += '<li class="timer">'
-					+'<p class="pre" title="1">'+vocabulary.curr.look+'</p><var>'+this+'</var>';
-				if (warn > 0)
-					content += '<p class="pulse" title="'+warn+'">'
-							+vocabulary.curr.seconds.numerify(warn)
-							+'</p>';
-				content += '<samp>'
-						+vocabulary.curr.passCards.numerify(cardsInBooster-1-no)
-						+'</samp><button>'+vocabulary.curr.passed+'</button>'
-						+'<p class="info">'
-						+vocabulary.curr.cardNum.ordify(no+1)
-						+'<br>'+boosterTitle+'</p>'
-						+'</li>';
-			});
-			me.after(content);
+			var t = content.clone().children();
+			t.find('.info .booster').text(me.attr('title'));
+			me.after(t);
 			me.remove();
-			return;
 		});
+		/* Simple Booster end */
 	},
 
 	timers: function(){
@@ -320,9 +317,9 @@ preparation = {
 
 		$('li var').parent().append('<p class="timerControls">'
 			+'<a href="" class="restart">'
-			+ vocabulary.curr.restartTimer + '</a> '
+			+ vocabulary.get('restartTimer') + '</a> '
 			+'<a href="" class="skip">'
-			+ vocabulary.curr.skipTimer +'</a>'
+			+ vocabulary.get('skipTimer') +'</a>'
 			+'</p>');
 		$('.timerControls')
 			.find('.restart').click(function(e){
@@ -354,13 +351,15 @@ preparation = {
 settings = {
 	setup: function(){
 		$('#s-sounds')
+			.hover(function(){ $(this).trigger('focus') })
 			.attr('disabled', false)
 			.focus(function(){
 				sounds.test(function(sounds){
+					console.log('called back with', sounds);
 					if (!sounds)
 					{
 						$('#soundsNotFound').show('fast');
-						$('#s-sounds').removeAttr('checked').attr('disabled',true);
+						$('#s-sounds').prop('checked', false).attr('disabled', true);
 					}
 				});
 			})
@@ -400,17 +399,20 @@ settings = {
 		$('#settings')
 			.find('input, select').each(function(){
 				var me = $(this);
-				cookies.set(me.attr('id'),
-					settings.getElementsValue(me), 'max');
+				if (typeof localStorage != 'undefined')
+					localStorage[me.attr('id')] = settings.getElementsValue(me);
 			});
 	},
 	load: function(){
 		$('#settings')
 			.find('input, select').each(function(){
 				var me = $(this);
-				var v = cookies.get(me.attr('id'));
-				if (v !== null)
-					settings.setElementsValue(me, v);
+				if (typeof localStorage != 'undefined')
+				{
+					var v = localStorage[me.attr('id')];
+					if (v !== null)
+						settings.setElementsValue(me, v);
+				}
 			});
 	},
 
@@ -419,10 +421,10 @@ settings = {
 	cache: {},
 
 	getElementsValue: function(me){
-		switch (me.attr('type'))
+		switch (me.prop('type'))
 		{
 			case 'checkbox':
-				return me.attr('checked');
+				return !me.prop('disabled') && me.prop('checked');
 			case 'text':
 			case 'hidden':
 				return me.val();
@@ -431,10 +433,10 @@ settings = {
 		}
 	},
 	setElementsValue: function(me, v){
-		switch (me.attr('type'))
+		switch (me.prop('type'))
 		{
 			case 'checkbox':
-				me.attr('checked',v);
+				me.prop('checked',v == 'true');
 				return v;
 			case 'text':
 			case 'hidden':
