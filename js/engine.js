@@ -272,8 +272,6 @@ preparation = {
 		this.templates();
 		this.timers();
 		// Setting the texts in the engine
-		if (settings.get('s-14cardPack'))
-			$('.var-cardsInBooster').text('14');
 		for (var i=1;i<4;++i)
 			$('.var-set'+i).text('‘'+settings.get('s-set'+i)+'’');
 	},
@@ -284,12 +282,8 @@ preparation = {
 			var me = $(this);
 			var content = '';
 			var boosterTitle = me.attr('title');
-			var simpleBooster = [40, 40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
+			var simpleBooster = [40, 35, 30, 25, 25, 20, 20, 15, 10, 10, 5, 5, 5];
 			var cardsInBooster = 15;
-
-			if ($('#s-14cardPack').attr('checked'))
-				simpleBooster.shift();
-				cardsInBooster = 14;
 
 			$(simpleBooster).each(function(no){
 				var warn = 10;

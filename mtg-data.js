@@ -39,6 +39,12 @@ sets = [
 	'Alara Reborn',
 	'Magic 2010',
 	'Zendikar',
-	'Worldwake'
+	'Worldwake',
+	'Rise of the Eldrazi',
+	'Magic 2011',
+	'Scars of Mirrodin',
+	'Mirrodin Besieged',
+	'New Phyrexia',
+	'Magic 2012'
 ]
 sets.reverse()
