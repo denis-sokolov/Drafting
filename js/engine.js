@@ -51,7 +51,7 @@ vocabulary = (function(){
 		var name = me.attr('title');
 		if (t.indexOf('(N') < 0)
 		{ // Do not engage regexp, indexOf is faster
-			if (name == 'langCode' && t == '[lang-code]')
+			if (name == 'langCode' && t == '{lang-code}')
 			{
 				t = 'en';
 				debug.on();

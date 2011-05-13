@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import gettext, os, os.path, re, shutil
+import datetime, gettext, os, os.path, re, shutil
 from PyHtmlify import htmlify
 
 
@@ -42,7 +42,9 @@ if __name__ == '__main__':
 			lang = lang[:-3]
 			setLang(lang)
 			html = re.sub(r'\[([^]]+)\]', keyword, getHtml())
-			html = html.replace('lang-code', lang)
+			html = html.replace('{lang-code}', lang)
+			html = html.replace('{release-date}', datetime.date.today().strftime('%Y-%m-%d'))
+			html = html.replace('{release-year}', datetime.date.today().strftime('%Y'))
 			with open('output/%s.html' % lang, 'w') as out:
 				out.write(html)
 			htmlify.Htmlifier().htmlify(
