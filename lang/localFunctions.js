@@ -43,15 +43,16 @@ localFunctions = {
 	is: {
 		ord: function(num, texts) { return num+'. '+texts[0]; },
 		num: function(num, texts) {
-			if (num%10 == 1 && num != 11) return num+' '+texts[1];
-			return num+' '+texts[0];
+			if (num%10 == 1 && num != 11) return num+' '+texts[0];
+			return num+' '+texts[1];
 		}
 	},
 	lt: {
 		ord: function(num, texts) { return num+texts[0]; },
 		num: function(num, texts) {
-			if (num%10 == 1 && num != 11) return num+' '+texts[1];
-			return num+' '+texts[0];
+			if (num%10 == 1 && num != 11) return num+' '+texts[0];
+			if (num%10 == 0 || (num%100 > 10 && num%100 < 20)) return num+' '+texts[2];
+			return num+' '+texts[1];
 		}
 	}
 };
