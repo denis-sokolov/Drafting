@@ -190,5 +190,5 @@ msgid "pass-cards"
 msgstr "Передайте (N карту/карты/карт)."
 
 msgid "card-number"
-msgstr "(N) карта"
+msgstr "(N-ая) карта"
 
