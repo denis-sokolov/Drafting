@@ -18,7 +18,7 @@ def prepareOutput():
 def setLang(lang):
 	os.makedirs('output/%s/LC_MESSAGES/' % lang)
 	shutil.copy('lang/%s.mo' % lang, 'output/%s/LC_MESSAGES/t.mo' % lang)
-	os.environ['LANGUAGE'] = lang
+	os.environ['LANGUAGE'] = '%s:en' % lang
 	gettext.bindtextdomain('t', 'output/')
 	gettext.textdomain('t')
 
