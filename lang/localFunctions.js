@@ -19,7 +19,7 @@ localFunctions = {
 		num: function(num, texts) { if (num == 1) return num+' '+texts[0]; else return num+' '+texts[1]; },
 	},
 	ru: {
-		ord: function(num, texts) { return num+' '+texts[0]; },
+		ord: function(num, texts) { return num+texts[0]; },
 		num: function(num, texts) {
 			switch (num%100)
 			{
@@ -40,4 +40,18 @@ localFunctions = {
 			}
 		}
 	},
+	is: {
+		ord: function(num, texts) { return num+'. '+texts[0]; },
+		num: function(num, texts) {
+			if (num%10 == 1 && num != 11) return num+' '+texts[1];
+			return num+' '+texts[0];
+		}
+	},
+	lt: {
+		ord: function(num, texts) { return num+texts[0]; },
+		num: function(num, texts) {
+			if (num%10 == 1 && num != 11) return num+' '+texts[1];
+			return num+' '+texts[0];
+		}
+	}
 };

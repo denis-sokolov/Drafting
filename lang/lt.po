@@ -1,0 +1,212 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Drafting\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-05-17 10:38+0000\n"
+"Last-Translator: Akral <transifex@sokolov.cc>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid "title"
+msgstr ""
+
+msgid "desc"
+msgstr ""
+
+msgid "loading"
+msgstr ""
+
+msgid "c-h1"
+msgstr ""
+
+msgid "c-h2"
+msgstr ""
+
+msgid "c-h3"
+msgstr ""
+
+msgid "understood"
+msgstr ""
+
+msgid "about"
+msgstr ""
+
+msgid "t-about"
+msgstr ""
+
+msgid "homepage"
+msgstr ""
+
+msgid "t-homepage"
+msgstr ""
+
+msgid "offline-notice"
+msgstr ""
+
+msgid "noted"
+msgstr ""
+
+msgid "settings"
+msgstr ""
+
+msgid "setting-5seconds"
+msgstr ""
+
+msgid "setting-sounds"
+msgstr ""
+
+msgid "setting-sounds-notfound"
+msgstr ""
+
+msgid "setting-sounds-download"
+msgstr ""
+
+msgid "setting-sounds-restart"
+msgstr ""
+
+msgid "sets"
+msgstr ""
+
+msgid "start-draft"
+msgstr ""
+
+msgid "instructions-1"
+msgstr "Sveiki, drafto dalyviai!"
+
+msgid "instructions-2"
+msgstr "Mes draftinsime tris pakelius,"
+
+msgid "instructions-2-and"
+msgstr "ir"
+
+msgid "instructions-3"
+msgstr "Įsitikinkite, kad turite šiuos pakelius prieš savę."
+
+msgid "instructions-4"
+msgstr ""
+"Drafto metu, kai aš sakysiu „žiūrim“, jūs galėsite pažiūrėti į kortas savo "
+"rankose. Aš įspėsiu, kai laikas bus beveik pasibaigęs, o, kai aš pasakysiu "
+"„perduodam“, jūs turėsite tučtuojau perduoti kortas. Jeigu įmanoma, "
+"išmaišykite jas ir išdeliokite ant stalo po tris kortas."
+
+msgid "continue"
+msgstr "Tęsti"
+
+msgid "instructions-5"
+msgstr ""
+"Tarp pakelių jūs turėsite truputį laiko peržvelgti kortoms, kurias jau "
+"pririnkote."
+
+msgid "instructions-6"
+msgstr ""
+"Drafto metu jūs turite susikaupti ties savo kortomis ir stengtis "
+"neatskleisti jokios strateginės informacijos savo varžovams."
+
+msgid "they-got-it"
+msgstr "Aišku"
+
+msgid "open-first"
+msgstr "Atidarykite pirmą pakelį, "
+
+msgid "open-first-2"
+msgstr ""
+", ir suskaičiuokite kortas jame <strong>užverstomis</strong>. Jame turi būti"
+" keturiolika kortų."
+
+msgid "open-second"
+msgstr "Atidarykite antrą pakelį, "
+
+msgid "open-second-2"
+msgstr ""
+", ir suskaičiuokite kortas jame <strong>užverstomis</strong>. Jame turi būti"
+" keturiolika kortų."
+
+msgid "open-third"
+msgstr "Atidarykite trečią pakelį, "
+
+msgid "open-third-2"
+msgstr ""
+", ir suskaičiuokite kortas jame <strong>užverstomis</strong>. Jame turi būti"
+" keturiolika kortų."
+
+msgid "yes-there-are"
+msgstr "Tiek ir yra."
+
+msgid "pass-left"
+msgstr "Dabar reikės perduoti kortas į jūsų <strong>kairę</strong>."
+
+msgid "pass-right"
+msgstr "Dabar reikės perduoti kortas į jūsų <strong>dešinę</strong>."
+
+msgid "prepare-and-silence"
+msgstr "Pasiruoškite draftui ir laikykitės tylos."
+
+msgid "begin-draft"
+msgstr "Pradėti draftą."
+
+msgid "begin-second-booster"
+msgstr "Pradėti draftinti antrą pakelį."
+
+msgid "begin-third-booster"
+msgstr "Pradėti draftinti trečią pakelį."
+
+msgid "booster-1"
+msgstr "Pirmas pakelis"
+
+msgid "booster-2"
+msgstr "Antras pakelis"
+
+msgid "booster-3"
+msgstr "Trečias pakelis"
+
+msgid "look"
+msgstr "Žiūrim!"
+
+msgid "review-30"
+msgstr "Jūs turite 30 sekundžių peržvelgti, ką jau pririnkote."
+
+msgid "review-45"
+msgstr "Jūs turite 45 sekundes peržvelgti, ką jau pririnkote."
+
+msgid "10-seconds"
+msgstr "10 sekundžių!"
+
+msgid "5-seconds"
+msgstr "5 sekundės!"
+
+msgid "put-back"
+msgstr "Padėkite kortas atgal."
+
+msgid "done"
+msgstr "Atlikta."
+
+msgid "draft-over"
+msgstr "Draftas pabaigtas."
+
+msgid "take-and-sit"
+msgstr ""
+"Paimkite savo kortas ir užimkite savo vietas. Stenkitės neatskleisti jokios "
+"strateginės informacijos kitiems žaidėjams."
+
+msgid "finish"
+msgstr "Baigti."
+
+msgid "about-title"
+msgstr ""
+
+msgid "restart-timer"
+msgstr "Paleisti naujai"
+
+msgid "skip-timer"
+msgstr "Praleisti laikrodį"
+
+msgid "pass-cards"
+msgstr "Perduokite (N kortą/kortas/kortų)"
+
+msgid "card-number"
+msgstr "(N-a) korta"

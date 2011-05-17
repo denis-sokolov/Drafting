@@ -1,0 +1,203 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Drafting\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-05-17 10:50+0000\n"
+"Last-Translator: Akral <transifex@sokolov.cc>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: is_IS\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "title"
+msgstr "Draft tímamæling"
+
+msgid "desc"
+msgstr ""
+
+msgid "loading"
+msgstr ""
+
+msgid "c-h1"
+msgstr ""
+
+msgid "c-h2"
+msgstr ""
+
+msgid "c-h3"
+msgstr ""
+
+msgid "understood"
+msgstr ""
+
+msgid "about"
+msgstr ""
+
+msgid "t-about"
+msgstr ""
+
+msgid "homepage"
+msgstr ""
+
+msgid "t-homepage"
+msgstr ""
+
+msgid "offline-notice"
+msgstr ""
+
+msgid "noted"
+msgstr ""
+
+msgid "settings"
+msgstr "Stillingar"
+
+msgid "setting-5seconds"
+msgstr "Láta vita eftir 5 sekúndur í stað 10"
+
+msgid "setting-sounds"
+msgstr "Hljóð"
+
+msgid "setting-sounds-notfound"
+msgstr "Engar hjóðskrár fundust."
+
+msgid "setting-sounds-download"
+msgstr "Hlaðið þeim niður "
+
+msgid "setting-sounds-restart"
+msgstr "og <a href=\"\">endurræsið</a>"
+
+msgid "sets"
+msgstr "Seríur"
+
+msgid "start-draft"
+msgstr "Byrja"
+
+msgid "instructions-1"
+msgstr "Velkomin."
+
+msgid "instructions-2"
+msgstr "Við notum þrjá pakka &mdash;"
+
+msgid "instructions-2-and"
+msgstr "og"
+
+msgid "instructions-3"
+msgstr "Hafið þessa þrjá pakka fyrir framan ykkur."
+
+msgid "instructions-4"
+msgstr ""
+"Þegar ég segi âSkoðaâ megið þið skoða spilin. Ég læt vita þegar tíminn "
+"er alveg að renna út, bið ykkur svo að âRéttaâ spilin áfram og þá eigið "
+"þið að láta þau ganga strax. Munið að stokka þau áður."
+
+msgid "continue"
+msgstr "Áfram"
+
+msgid "instructions-5"
+msgstr "Milli pakka fáið þið tíma til að skoða spilin sem þið hafið valið."
+
+msgid "instructions-6"
+msgstr ""
+"Þið skuluð einbeita ykkur að spilunum sem þið veljið og reyna að gefa öðrum "
+"spilurum ekki nokkrar vísbendingar eða upplýsingar."
+
+msgid "they-got-it"
+msgstr "Allir hafa náð því."
+
+msgid "open-first"
+msgstr "Opnið fyrsta pakkann, sem er"
+
+msgid "open-first-2"
+msgstr ""
+". Leggið til hliðar aukaspilin tvö sem fylgja í pakkanum. Þið eigið að hafa "
+"14 spil."
+
+msgid "open-second"
+msgstr "Opnið annan pakkann, sem er "
+
+msgid "open-second-2"
+msgstr ". Leggið til hliðar aukaspilin tvö. Þið eigið að hafa 14 spil."
+
+msgid "open-third"
+msgstr "Opnið þriðja pakkann, sem er"
+
+msgid "open-third-2"
+msgstr ". Leggið til hliðar aukaspilin tvö. Þið eigið að hafa 14 spil."
+
+msgid "yes-there-are"
+msgstr "Já, það passar."
+
+msgid "pass-left"
+msgstr "Þið réttið spilin til <strong>vinstri</strong>."
+
+msgid "pass-right"
+msgstr "Þið réttið spilin núna til <strong>hægri</strong>."
+
+msgid "prepare-and-silence"
+msgstr "Hafið hljóð á meðan."
+
+msgid "begin-draft"
+msgstr "Byrjið núna."
+
+msgid "begin-second-booster"
+msgstr "Þið megið skoða spilin."
+
+msgid "begin-third-booster"
+msgstr "Þið megið skoða spilin."
+
+msgid "booster-1"
+msgstr "Pakki 1"
+
+msgid "booster-2"
+msgstr "Pakki 2"
+
+msgid "booster-3"
+msgstr "Pakki 3"
+
+msgid "look"
+msgstr "Skoða!"
+
+msgid "review-30"
+msgstr "Þið hafið 30 sekúndur til að skoða spilin sem þið hafið valið."
+
+msgid "review-45"
+msgstr "Þið hafið 45 sekúndur til að skoða spilin sem þið hafið valið."
+
+msgid "10-seconds"
+msgstr "10 sekúndur!"
+
+msgid "5-seconds"
+msgstr "5 sekúndur!"
+
+msgid "put-back"
+msgstr "Leggið spilin niður."
+
+msgid "done"
+msgstr "Áfram."
+
+msgid "draft-over"
+msgstr "Nú hafa öll spilin gengið út."
+
+msgid "take-and-sit"
+msgstr "Þið hafið 20 mínútur til að búa til stokk."
+
+msgid "finish"
+msgstr "Ljúka."
+
+msgid "about-title"
+msgstr "Um forritið"
+
+msgid "restart-timer"
+msgstr "Byrja talningu aftur"
+
+msgid "skip-timer"
+msgstr "Sleppa talningu"
+
+msgid "pass-cards"
+msgstr "Réttið (N spil/spil)."
+
+msgid "card-number"
+msgstr "(N) spil"
