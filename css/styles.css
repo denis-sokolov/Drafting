@@ -77,7 +77,9 @@ ul { list-style-type: none }
 	.info { margin-top: 1ex }
 	.info,
 	.timerControls { visibility: hidden; font-size: 60%;
-		line-height: 1em }
+		line-height: 1em; }
+	.timerControls a { opacity: 0.5; transition: opacity 0.5s }
+	.timerControls a:hover { opacity: 1 }
 
 	.appname { font-size: 60%; line-height: 1em }
 		.appname .version { font-size:120% }

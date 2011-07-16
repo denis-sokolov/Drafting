@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import datetime, gettext, os, os.path, re, shutil
 from PyHtmlify import htmlify
+from PyHtmlify.PyCssMagic.CssMagic import CssMagic
 
 
 # Compile using msgfmt -o
@@ -36,7 +37,14 @@ def keyword(key):
 
 if __name__ == '__main__':
 	prepareOutput()
-
+	
+	for name in os.listdir('output/css'):
+		print name
+		with open('output/css/%s' % name) as f:
+			css = f.read()
+		with open('output/css/%s' % name, 'w') as f:
+			f.write(CssMagic(css).magic().get())
+		
 	for lang in os.listdir('lang'):
 		if lang.endswith('.mo'):
 			lang = lang[:-3]
