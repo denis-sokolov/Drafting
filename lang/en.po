@@ -177,9 +177,6 @@ msgstr "Please take your cards and proceed to your sitting place. Try to avoid g
 msgid "finish"
 msgstr "Finish."
 
-msgid "about-title"
-msgstr "About the program"
-
 msgid "restart-timer"
 msgstr "Restart timer"
 
