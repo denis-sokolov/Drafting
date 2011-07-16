@@ -242,7 +242,7 @@ step = {
 
 			return;
 		}
-		step.timerHelper.element.text((remaining/1000).toFixed(1));
+		step.timerHelper.element.html('<span class="sec">'+Math.floor(remaining/1000)+'</span><span class="decosec">.'+(Math.floor(remaining/100)%10)+'</span>');
 		timers.set(step.timerHelper, constants.tick, (remaining-constants.tick));
 	}
 };
