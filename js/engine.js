@@ -326,11 +326,11 @@ preparation = {
 				e.preventDefault();
 				timers.stop();
 				$(this).parents('li')
-					.fadeOut(function(){
+					.animate({'opacity': 0}, function(){
 						var me = $(this);
 						me
 							.find('var').text(me.find('var').attr('title')).end()
-							.fadeIn();
+							.animate({'opacity': 1});
 						navigation.curr();
 					});
 			}).end()
