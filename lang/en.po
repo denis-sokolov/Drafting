@@ -87,6 +87,9 @@ msgstr "Please make sure you have these three packs in front of you."
 msgid "instructions-4"
 msgstr "During the draft, when I say ‘Look’, you may look at the cards in your hand. I will remind you, when the time is nearly up 	and when I say ‘Pass’, you should pass your cards at once. If possible, shuffle the cards and lay them out on the table in packs of 3."
 
+msgid "instructions-4.5"
+msgstr "When your neighbour has passed his cards to you, pick them up, but don't look at them until I say so."
+
 msgid "continue"
 msgstr "Continue"
 
@@ -127,7 +130,7 @@ msgid "pass-right"
 msgstr "You have to pass the cards now to your <strong>right</strong>."
 
 msgid "prepare-and-silence"
-msgstr "Prepare for the draft and keep silence."
+msgstr "Prepare for the draft and stay silent."
 
 msgid "begin-draft"
 msgstr "Begin the draft."

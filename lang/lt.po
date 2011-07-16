@@ -1,9 +1,11 @@
-#
+# 
+#   <transifex@sokolov.cc>, 2011.
+# Akral <transifex@sokolov.cc>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Drafting\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-05-17 10:38+0000\n"
+"PO-Revision-Date: 2011-07-16 20:57+0000\n"
 "Last-Translator: Akral <transifex@sokolov.cc>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,67 +15,69 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 msgid "title"
-msgstr ""
+msgstr "Draftinimo įrankis"
 
 msgid "desc"
-msgstr ""
+msgstr "Įrankis teisėjui šaukti Magic draftą."
 
 msgid "loading"
-msgstr ""
+msgstr "Kraunama..."
 
 msgid "c-h1"
-msgstr ""
+msgstr "Sveikas, teisėjau!"
 
 msgid "c-h2"
-msgstr ""
+msgstr "Tau tereikia skaityti tekstą nuo ekrano ir stebėti žaidėjus."
 
 msgid "c-h3"
-msgstr ""
+msgstr "Programa valdoma vienu mygtuku – <strong>tarpu</strong>."
 
 msgid "understood"
-msgstr ""
+msgstr "Aišku."
 
 msgid "about"
-msgstr ""
+msgstr "Apie"
 
 msgid "t-about"
-msgstr ""
+msgstr "Persijungti į ekraną apie programą"
 
 msgid "homepage"
-msgstr ""
+msgstr "Svetainė"
 
 msgid "t-homepage"
-msgstr ""
+msgstr "Pereiti į programos svetainę"
 
 msgid "offline-notice"
 msgstr ""
+"Kad nautotumeisi programa be interneto, išsaugok ją į savo kompiuterį. Bet "
+"užsuk į internetą kartais, pažiūrėti, ar ji neatsinaujino."
 
 msgid "noted"
-msgstr ""
+msgstr "Gerai."
 
 msgid "settings"
-msgstr ""
+msgstr "Nustatymai"
 
 msgid "setting-5seconds"
-msgstr ""
+msgstr "Įspėjimai prieš 5 sekundes, o ne 10"
 
 msgid "setting-sounds"
-msgstr ""
+msgstr "Garsai"
 
 msgid "setting-sounds-notfound"
-msgstr ""
+msgstr "Garsai nerasti."
 
 msgid "setting-sounds-download"
-msgstr ""
+msgstr "Atsisiųsk juos"
 
 msgid "setting-sounds-restart"
-msgstr ""
+msgstr "ir <a href=\"\">perkrauk programą</a>"
 
 msgid "sets"
-msgstr ""
+msgstr "Rinkiniai:"
 
 msgid "start-draft"
-msgstr ""
+msgstr "Paleisti draftą"
 
 msgid "instructions-1"
 msgstr "Sveiki, drafto dalyviai!"
@@ -93,6 +97,11 @@ msgstr ""
 "rankose. Aš įspėsiu, kai laikas bus beveik pasibaigęs, o, kai aš pasakysiu "
 "„perduodam“, jūs turėsite tučtuojau perduoti kortas. Jeigu įmanoma, "
 "išmaišykite jas ir išdeliokite ant stalo po tris kortas."
+
+msgid "instructions-4.5"
+msgstr ""
+"Kai kaimynas pasiuntė jums savo kortas, paimkite jas į rankas, tačiau "
+"nežiūrėkite, kol aš nepasakysiu."
 
 msgid "continue"
 msgstr "Tęsti"
@@ -180,7 +189,7 @@ msgid "5-seconds"
 msgstr "5 sekundės!"
 
 msgid "put-back"
-msgstr "Padėkite kortas atgal."
+msgstr "Padėkite kortas atgal, vienoje krūvelėje."
 
 msgid "done"
 msgstr "Atlikta."
@@ -196,9 +205,6 @@ msgstr ""
 msgid "finish"
 msgstr "Baigti."
 
-msgid "about-title"
-msgstr ""
-
 msgid "restart-timer"
 msgstr "Paleisti naujai"
 
@@ -210,3 +216,5 @@ msgstr "Perduokite (N kortą/kortas/kortų)"
 
 msgid "card-number"
 msgstr "(N-a) korta"
+
+

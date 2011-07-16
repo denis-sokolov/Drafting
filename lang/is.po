@@ -1,9 +1,11 @@
 # 
+# almar <almar@hi.is>, 2011.
+# Akral <transifex@sokolov.cc>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Drafting\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-05-17 10:50+0000\n"
+"PO-Revision-Date: 2011-07-16 20:40+0000\n"
 "Last-Translator: Akral <transifex@sokolov.cc>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -89,9 +91,9 @@ msgstr "Hafið þessa þrjá pakka fyrir framan ykkur."
 
 msgid "instructions-4"
 msgstr ""
-"Þegar ég segi âSkoðaâ megið þið skoða spilin. Ég læt vita þegar tíminn "
-"er alveg að renna út, bið ykkur svo að âRéttaâ spilin áfram og þá eigið "
-"þið að láta þau ganga strax. Munið að stokka þau áður."
+"Þegar ég segi <strong>Skoða!</strong> megið þið skoða spilin. Ég læt vita "
+"þegar tíminn er alveg að renna út, bið ykkur svo að rétta spilin áfram og þá"
+" eigið þið að láta þau ganga strax. Munið að stokka þau áður."
 
 msgid "continue"
 msgstr "Áfram"
@@ -105,7 +107,7 @@ msgstr ""
 "spilurum ekki nokkrar vísbendingar eða upplýsingar."
 
 msgid "they-got-it"
-msgstr "Allir hafa náð því."
+msgstr "Allir hafa náð því"
 
 msgid "open-first"
 msgstr "Opnið fyrsta pakkann, sem er"
@@ -128,25 +130,25 @@ msgid "open-third-2"
 msgstr ". Leggið til hliðar aukaspilin tvö. Þið eigið að hafa 14 spil."
 
 msgid "yes-there-are"
-msgstr "Já, það passar."
+msgstr "Já, það passar"
 
 msgid "pass-left"
 msgstr "Þið réttið spilin til <strong>vinstri</strong>."
 
 msgid "pass-right"
-msgstr "Þið réttið spilin núna til <strong>hægri</strong>."
+msgstr "Þið réttið spilin til <strong>hægri</strong>."
 
 msgid "prepare-and-silence"
 msgstr "Hafið hljóð á meðan."
 
 msgid "begin-draft"
-msgstr "Byrjið núna."
+msgstr "Byrjið núna"
 
 msgid "begin-second-booster"
-msgstr "Þið megið skoða spilin."
+msgstr "Þið megið skoða spilin"
 
 msgid "begin-third-booster"
-msgstr "Þið megið skoða spilin."
+msgstr "Þið megið skoða spilin"
 
 msgid "booster-1"
 msgstr "Pakki 1"
@@ -176,7 +178,7 @@ msgid "put-back"
 msgstr "Leggið spilin niður."
 
 msgid "done"
-msgstr "Áfram."
+msgstr "Áfram"
 
 msgid "draft-over"
 msgstr "Nú hafa öll spilin gengið út."
@@ -185,10 +187,7 @@ msgid "take-and-sit"
 msgstr "Þið hafið 20 mínútur til að búa til stokk."
 
 msgid "finish"
-msgstr "Ljúka."
-
-msgid "about-title"
-msgstr "Um forritið"
+msgstr "Loka"
 
 msgid "restart-timer"
 msgstr "Byrja talningu aftur"
@@ -201,3 +200,5 @@ msgstr "Réttið (N spil/spil)."
 
 msgid "card-number"
 msgstr "(N) spil"
+
+
