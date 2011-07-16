@@ -163,7 +163,7 @@ msgid "5-seconds"
 msgstr "5 seconds!"
 
 msgid "put-back"
-msgstr "Put back the cards."
+msgstr "Put back the cards. Keep them in one pile."
 
 msgid "done"
 msgstr "Done."
