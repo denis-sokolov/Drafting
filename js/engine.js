@@ -351,11 +351,9 @@ preparation = {
 settings = {
 	setup: function(){
 		$('#s-sounds')
-			.hover(function(){ $(this).trigger('focus') })
 			.attr('disabled', false)
-			.focus(function(){
+			.change(function(){
 				sounds.test(function(sounds){
-					console.log('called back with', sounds);
 					if (!sounds)
 					{
 						$('#soundsNotFound').show('fast');
