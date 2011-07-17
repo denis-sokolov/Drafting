@@ -25,6 +25,7 @@ def prepareOutput():
 	shutil.copy('mtg-data.js', 'output/mtg-data.js')
 	os.mkdir('output/lang')
 	shutil.copy('lang/localFunctions.js', 'output/lang/localFunctions.js')
+	os.mkdir('output/hosting')
 
 def setLang(lang):
 	os.makedirs('output/%s/LC_MESSAGES/' % lang)
@@ -61,4 +62,9 @@ if __name__ == '__main__':
 			htmlify.Htmlifier().htmlify(
 				input='output/%s.html' % lang,
 				output='output/%s.min.html' % lang)
-
+			
+			# Add a hosted copy with offline manifest
+			with open('output/%s.min.html' % lang) as f:
+				minified = f.read()
+			with open('output/hosting/%s.min.html' % lang, 'w') as f:
+				f.write(minified.replace('<html', '<html manifest="drafting.manifest"'))
