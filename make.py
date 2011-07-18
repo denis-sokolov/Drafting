@@ -44,9 +44,24 @@ if __name__ == '__main__':
 		with open('output/css/%s' % name, 'w') as f:
 			f.write(CssMagic(css).magic().get())
 	
-	# Do main work
+	# Get content
 	with open('drafting.html') as f:
 		source = f.read()
+	
+	# Version system
+	version = re.search(r'class="version"[^>]+\>([^<]+)', source).group(1)
+	with open('output/hosting/version.txt', 'w') as f:
+		f.write(version)
+	with open('output/version.txt', 'w') as f:
+		f.write(version)
+	with open('output/hosting/drafting.manifest', 'w') as f:
+		f.write('CACHE MANIFEST\nNETWORK:\nversion.txt')
+	with open('hosting-index.html') as f:
+		index = f.read()
+	with open('output/hosting/index.html', 'w') as f:
+		f.write(index.replace('.min.html', '.%s.html' % version))
+	
+	# Languages and main script	
 	for lang in os.listdir('lang'):
 		if lang.endswith('.mo'):
 			lang = lang[:-3]
@@ -66,5 +81,5 @@ if __name__ == '__main__':
 			# Add a hosted copy with offline manifest
 			with open('output/%s.min.html' % lang) as f:
 				minified = f.read()
-			with open('output/hosting/%s.min.html' % lang, 'w') as f:
+			with open('output/hosting/%s.%s.html' % (lang, version), 'w') as f:
 				f.write(minified.replace('<html', '<html manifest="drafting.manifest"'))

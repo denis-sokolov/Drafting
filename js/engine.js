@@ -21,8 +21,22 @@ $(document).ready(function(){
 	controls.setup();
 	navigation.first();
 	$('.loading').hide();
+	updates.setup();
 });
 
+updates = (function(){
+	var updates_available = function(){
+		$('<p class="update">There is a <a href="index.html">new version of this program</a>.</p>').prependTo('body');
+	}
+	return {
+		setup: function(){
+			$.get('version.txt', function(result){
+				if ($('.version').text() != result)
+					updates_available();
+			});
+		}
+	}
+})();
 
 debug = {
 	state: false,
