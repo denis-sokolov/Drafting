@@ -1,0 +1,229 @@
+# 
+#   <teunzijp@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: Drafting\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-07-18 10:36+0000\n"
+"Last-Translator: Teun <teunzijp@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "title"
+msgstr "Draft timer"
+
+msgid "desc"
+msgstr ""
+"Een applicatie om een judge te helpen met het callen van een Magic booster "
+"draft."
+
+msgid "loading"
+msgstr "Bezig met laden van de applicatie..."
+
+msgid "c-h1"
+msgstr "Hallo, medejudge die een Magic draft wil gaan callen!"
+
+msgid "c-h2"
+msgstr ""
+"Het enige wat je hoeft te doen is de tekst op het scherm voor te lezen en op"
+" de spelers te letten."
+
+msgid "c-h3"
+msgstr ""
+"Het programma wordt door één knop bestuurd. Je kunt gewoon op de "
+"<strong>spatiebalk</strong> drukken om verder te gaan. "
+
+msgid "understood"
+msgstr "Begrepen. Daar gaan we!"
+
+msgid "about"
+msgstr "Info"
+
+msgid "t-about"
+msgstr "Ga naar het informatiescherm over het programma"
+
+msgid "homepage"
+msgstr "Homepage"
+
+msgid "t-homepage"
+msgstr ""
+"Bekijk de homepage van de applicatie, waar je alle informatie erover kunt "
+"vinden."
+
+msgid "offline-notice"
+msgstr ""
+"Om deze applicatie op te slaan en offline te kunnen gebruiken, kun je de "
+"'File' en 'Save Page' functie van je browser gebruiken. Kijk alsjeblieft wel"
+" af en toe online, want de applicatie wordt geüpdatet en je offline versie "
+"blijft hetzelfde."
+
+msgid "noted"
+msgstr "OK."
+
+msgid "settings"
+msgstr "Instellingen"
+
+msgid "setting-5seconds"
+msgstr "Waarschuwing met 5 seconden in plaats van 10"
+
+msgid "setting-sounds"
+msgstr "Geluid"
+
+msgid "setting-sounds-notfound"
+msgstr "Ik heb geen geluiden gevonden."
+
+msgid "setting-sounds-download"
+msgstr "Download ze"
+
+msgid "setting-sounds-restart"
+msgstr "en <a href=\"\">herstart de applicatie</a>"
+
+msgid "sets"
+msgstr "Sets:"
+
+msgid "start-draft"
+msgstr "Start de draft"
+
+msgid "instructions-1"
+msgstr "Welkom in deze draft."
+
+msgid "instructions-2"
+msgstr "We gaan drie boosters draften &mdash;"
+
+msgid "instructions-2-and"
+msgstr "en"
+
+msgid "instructions-3"
+msgstr "Controleer alsjeblieft dat je deze drie boosters voor je hebt liggen."
+
+msgid "instructions-4"
+msgstr ""
+"Tijdens de draft zal ik âKijkâ zeggen, dan mag je de kaarten in je hand "
+"nemen en kijken. Ik geef een waarschuwing als de tijd bijna op is, en als ik"
+" zeg âDraftâ, dan moet je de andere kaarten direct doorgeven. Schud de "
+"kaarten dan en leg ze op de tafel in rijen van 3."
+
+msgid "instructions-4.5"
+msgstr ""
+"Als de speler naast je de kaarten heeft doorgegeven, kun je ze oppakken, "
+"maar nog niet ernaar kijken tot ik het zeg."
+
+msgid "continue"
+msgstr "Verder"
+
+msgid "instructions-5"
+msgstr ""
+"Tussen de boosters door krijg je wat tijd om te kijken naar de kaarten die "
+"je tot dan toe hebt gedraft."
+
+msgid "instructions-6"
+msgstr ""
+"Tijdens de draft moet je gefocust blijven op je eigen kaarten. Geef geen "
+"enkele vorm van informatie aan je tegenstanders."
+
+msgid "they-got-it"
+msgstr "Gaat ze lukken"
+
+msgid "open-first"
+msgstr "Open nu de eerste booster, dat is"
+
+msgid "open-first-2"
+msgstr ""
+", en tel de kaarten <strong>dicht</strong>. (Haal de token of tip kaart en "
+"niet-foil basic land eruit.) Er horen 14 kaarten in te zitten. "
+
+msgid "open-second"
+msgstr "Open nu de tweede booster, dat is"
+
+msgid "open-second-2"
+msgstr ""
+", en tel de kaarten <strong>dicht</strong>. (Haal de token of tip kaart en "
+"niet-foil basic land eruit.) Er horen 14 kaarten in te zitten. "
+
+msgid "open-third"
+msgstr "Open nu de derde booster, dat is"
+
+msgid "open-third-2"
+msgstr ""
+", en tel de kaarten <strong>dicht</strong>. (Haal de token of tip kaart en "
+"niet-foil basic land eruit.) Er horen 14 kaarten in te zitten. "
+
+msgid "yes-there-are"
+msgstr "Dat klopt!"
+
+msgid "pass-left"
+msgstr "In deze booster geef je de kaarten naar <strong>links</strong> door."
+
+msgid "pass-right"
+msgstr "In deze booster geef je de kaarten naar <strong>rechts</strong> door."
+
+msgid "prepare-and-silence"
+msgstr "De draft gaat beginnen, stilte iedereen."
+
+msgid "begin-draft"
+msgstr "Begin de draft."
+
+msgid "begin-second-booster"
+msgstr "Begin met de draft van de tweede booster."
+
+msgid "begin-third-booster"
+msgstr "Begin met de draft van de derde booster."
+
+msgid "booster-1"
+msgstr "Booster 1"
+
+msgid "booster-2"
+msgstr "Booster 2"
+
+msgid "booster-3"
+msgstr "Booster 3"
+
+msgid "look"
+msgstr "Kijk!"
+
+msgid "review-30"
+msgstr "Je hebt nu 30 seconden om je gedrafte kaarten te bekijken."
+
+msgid "review-45"
+msgstr "Je hebt nu 45 seconden om je gedrafte kaarten te bekijken."
+
+msgid "10-seconds"
+msgstr "10 seconden!"
+
+msgid "5-seconds"
+msgstr "5 seconden!"
+
+msgid "put-back"
+msgstr "Leg de kaarten weer voor je in één dichte stapel."
+
+msgid "done"
+msgstr "Klaar."
+
+msgid "draft-over"
+msgstr "De draft is klaar."
+
+msgid "take-and-sit"
+msgstr ""
+"Pak je kaarten op en ga naar je toegewezen zitplaats. Het is nog steeds niet"
+" toegestaan om informatie over de draft aan andere spelers te geven."
+
+msgid "finish"
+msgstr "Voltooien"
+
+msgid "restart-timer"
+msgstr "Herstart timer"
+
+msgid "skip-timer"
+msgstr "Overslaan "
+
+msgid "pass-cards"
+msgstr "Geef (N kaart(en)) door."
+
+msgid "card-number"
+msgstr "(N) kaart"
+
+
