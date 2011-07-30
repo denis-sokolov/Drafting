@@ -1,4 +1,8 @@
 localFunctions = {
+	nl: {
+		ord: function(num, texts) { return num+'e '+texts[0] },
+		num: function(num, texts) { if (num == 1) return num+' '+texts[0]; else return num+' '+texts[1]; },
+	},
 	en: {
 		ord: function(num, texts) {
 			switch(num%100)
