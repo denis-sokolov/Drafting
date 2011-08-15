@@ -1,11 +1,12 @@
 # 
 #   <teunzijp@gmail.com>, 2011.
+#   <transifex@sokolov.cc>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Drafting\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-07-18 10:36+0000\n"
-"Last-Translator: Teun <teunzijp@gmail.com>\n"
+"PO-Revision-Date: 2011-08-15 13:28+0000\n"
+"Last-Translator: Akral <transifex@sokolov.cc>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,9 +103,9 @@ msgstr "Controleer alsjeblieft dat je deze drie boosters voor je hebt liggen."
 
 msgid "instructions-4"
 msgstr ""
-"Tijdens de draft zal ik âKijkâ zeggen, dan mag je de kaarten in je hand "
+"Tijdens de draft zal ik 'Kijk' zeggen, dan mag je de kaarten in je hand "
 "nemen en kijken. Ik geef een waarschuwing als de tijd bijna op is, en als ik"
-" zeg âDraftâ, dan moet je de andere kaarten direct doorgeven. Schud de "
+" zeg 'Draft', dan moet je de andere kaarten direct doorgeven. Schud de "
 "kaarten dan en leg ze op de tafel in rijen van 3."
 
 msgid "instructions-4.5"
@@ -221,7 +222,7 @@ msgid "skip-timer"
 msgstr "Overslaan "
 
 msgid "pass-cards"
-msgstr "Geef (N kaart(en)) door."
+msgstr "Geef (N kaart/kaarten) door."
 
 msgid "card-number"
 msgstr "(N) kaart"
