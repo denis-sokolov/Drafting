@@ -9,7 +9,7 @@ def prepareOutput():
 	# Ensure output directory exists
 	if not os.path.exists('output'):
 		os.mkdir('output')
-		
+
 	# Ensure it is empty
 	for item in os.listdir('output'):
 		if os.path.isdir('output/%s' % item):
@@ -25,6 +25,7 @@ def prepareOutput():
 	os.mkdir('output/lang')
 	shutil.copy('lang/localFunctions.js', 'output/lang/localFunctions.js')
 	os.mkdir('output/hosting')
+	shutil.copytree('flags', 'output/hosting/flags')
 
 def setLang(lang):
 	os.makedirs('output/%s/LC_MESSAGES/' % lang)
@@ -35,11 +36,11 @@ def setLang(lang):
 
 if __name__ == '__main__':
 	prepareOutput()
-	
+
 	# Get content
 	with open('drafting.html') as f:
 		source = f.read()
-	
+
 	# Version system
 	version = re.search(r'class="version"[^>]+\>([^<]+)', source).group(1)
 	with open('output/hosting/version.txt', 'w') as f:
@@ -52,8 +53,8 @@ if __name__ == '__main__':
 		index = f.read()
 	with open('output/hosting/index.html', 'w') as f:
 		f.write(index.replace('.min.html', '.%s.html' % version))
-	
-	# Languages and main script	
+
+	# Languages and main script
 	for lang in os.listdir('lang'):
 		if lang.endswith('.mo'):
 			lang = lang[:-3]
@@ -69,7 +70,7 @@ if __name__ == '__main__':
 			htmlify.Htmlifier().htmlify(
 				input='output/%s.html' % lang,
 				output='output/%s.min.html' % lang)
-			
+
 			# Add a hosted copy with offline manifest
 			with open('output/%s.min.html' % lang) as f:
 				minified = f.read()
