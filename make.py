@@ -1,7 +1,6 @@
 #!/usr/bin/python
 import datetime, gettext, os, os.path, re, shutil
 from PyHtmlify import htmlify
-from PyHtmlify.PyCssMagic.CssMagic import CssMagic
 
 
 # Compile using msgfmt -o
@@ -36,13 +35,6 @@ def setLang(lang):
 
 if __name__ == '__main__':
 	prepareOutput()
-	
-	# Magic with CSS
-	for name in os.listdir('output/css'):
-		with open('output/css/%s' % name) as f:
-			css = f.read()
-		with open('output/css/%s' % name, 'w') as f:
-			f.write(CssMagic(css).magic().get())
 	
 	# Get content
 	with open('drafting.html') as f:
