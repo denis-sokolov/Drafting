@@ -1,3 +1,3 @@
 [submodule "PyHtmlify"]
 	path = PyHtmlify
-	url = git://github.com/Akral/PyHtmlify.git
+	url = git://github.com/denis-sokolov/PyHtmlify.git
