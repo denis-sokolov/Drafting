@@ -45,6 +45,24 @@ sets = [
 	'Scars of Mirrodin',
 	'Mirrodin Besieged',
 	'New Phyrexia',
-	'Magic 2012'
+	'Magic 2012',
+	'Innistrad',
+	'Dark Ascension',
+	'Avacyn Restored',
+	'Magic 2013',
+	'Return to Ravnica',
+	'Gatecrash',
+	'Dragon\'s Maze',
+	'Magic 2014',
+	'Theros',
+	'Born of the Gods',
+	'Journey into Nyx',
+	'Magic 2015',
+	'Khans of Tarkir',
+	'Fate Reforged',
+	'Dragons of Tarkir',
+	'Magic Origins',
+	'Battle for Zendikar',
+	'Oath of the Gatewatch'
 ]
 sets.reverse()
